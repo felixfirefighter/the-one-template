@@ -1,12 +1,14 @@
 'use client'
 
-import { Card, Image, Group, Text, Badge, Button } from '@the-one/mantine'
+import { Badge, Button, Card, Group, Image, Text } from '@the-one/mantine'
+import { AppButton } from '@the-one/mantine-custom'
 import styles from './page.module.css'
 
 export default function Page(): JSX.Element {
   return (
     <main className={styles.main}>
       <Card shadow="sm" padding="lg" radius="md" withBorder>
+        <AppButton></AppButton>
         <Card.Section>
           <Image
             src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
