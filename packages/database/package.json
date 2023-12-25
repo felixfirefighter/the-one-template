@@ -1,5 +1,5 @@
 {
-  "name": "@the-one/mysql",
+  "name": "@the-one/database",
   "version": "0.0.0",
   "private": true,
   "main": "src/index.ts",

@@ -1,5 +1,19 @@
 # The One Template
 
+## TODO
+
+### Template
+
+- Add API package
+- Add auth using `next-auth`
+- Add Redis using Upstash (optional)
+- Add session to context
+- Add adminProcedure, protectedProcedure
+- Add portfolio UI for web(?)
+  - Add homepage
+  - Add projects
+  
+
 ## Development
 
 ### Project structure
