@@ -1,7 +1,7 @@
 'use client'
 
 import { Badge, Button, Card, Group, Image, Text } from '@mantine/core'
-import { AppButton } from '../../../packages/ui/src'
+import { AppButton } from '@the-one/ui'
 import styles from './page.module.css'
 
 export default function Page(): JSX.Element {
