@@ -12,6 +12,9 @@
     "db:push": {
       "cache": false
     },
+    "db:seed": {
+      "cache": false
+    },
     "lint": {
       "dependsOn": ["^lint"]
     },
