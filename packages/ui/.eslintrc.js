@@ -6,5 +6,4 @@ module.exports = {
   parserOptions: {
     project: "./tsconfig.lint.json",
   },
-  ignorePatterns: ["postcss.config.cjs"]
 };

@@ -1,5 +1,5 @@
 import '@mantine/core/styles.css'
-import { ColorSchemeScript, MantineProvider } from '@the-one/mantine'
+import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import { Inter } from 'next/font/google'
 import './globals.css'
 
