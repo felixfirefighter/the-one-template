@@ -10,7 +10,16 @@
   "devDependencies": {
     "@the-one/eslint-config": "workspace:*",
     "@the-one/typescript-config": "workspace:*",
+    "@types/node": "^20.10.5",
     "eslint": "^8.53.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@trpc/client": "^10.44.1",
+    "@trpc/next": "^10.44.1",
+    "@trpc/react": "^9.27.4",
+    "@trpc/server": "^10.44.1",
+    "react-query": "^3.39.3",
+    "zod": "^3.22.4"
   }
 }

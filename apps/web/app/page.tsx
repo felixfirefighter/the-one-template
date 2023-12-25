@@ -1,10 +1,16 @@
 'use client'
 
 import { Badge, Button, Card, Group, Image, Text } from '@mantine/core'
+import { trpc } from '@the-one/api/src/client/trpc'
 import { AppButton } from '@the-one/ui'
 import styles from './page.module.css'
 
 export default function Page(): JSX.Element {
+  const hello = trpc.user.list.useQuery()
+  if (!hello.data) {
+    return <div>Loading...</div>
+  }
+
   return (
     <main className={styles.main}>
       <Card shadow="sm" padding="lg" radius="md" withBorder>
