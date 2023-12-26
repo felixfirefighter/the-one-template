@@ -2,9 +2,9 @@
   "extends": "@the-one/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "paths": {
-      "@trpc/server/*": ["./node_modules/@trpc/server/*"]
-    }
+    "allowImportingTsExtensions": true,
+    "emitDeclarationOnly": true,
+    "moduleResolution": "NodeNext"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]
