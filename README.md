@@ -9,10 +9,7 @@
 - Add Redis using Upstash (optional)
 - Add session to context
 - Add adminProcedure, protectedProcedure
-- Add portfolio UI for web(?)
-  - Add homepage
-  - Add projects
-  
+- Add The One UI for web
 
 ## Development
 
@@ -63,25 +60,20 @@ Note: When you change `DATABASE_URL` to your branch's `DATABASE_URL`, you are es
 
 ##### Better Comments
 
-Description: Improve your code commenting by annotating with alert, informational, TODOs, and more!
-Publisher: Aaron Bond
+Improve your code commenting by annotating with alert, informational, TODOs, and more!
 
 ##### CSS Modules
 
-Description: Visual Studio Code extension for CSS Modules
-Publisher: clinyong
+Visual Studio Code extension for CSS Modules
 
 ##### ESLint
 
-Description: Integrates ESLint JavaScript into VS Code.
-Publisher: Microsoft
+Integrates ESLint JavaScript into VS Code.
 
 ##### Prettier - Code formatter
 
-Description: Code formatter using prettier
-Publisher: Prettier
+Code formatter using prettier
 
 ##### Prisma
 
-Description: Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
-Publisher: Prisma
+Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.

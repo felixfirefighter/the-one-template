@@ -1,12 +1,12 @@
 'use client'
 
 import { Badge, Button, Card, Group, Image, Text } from '@mantine/core'
-import { trpc } from '@the-one/api/src/client/trpc'
+import { client } from '@the-one/api/src/client/trpc'
 import { AppButton } from '@the-one/ui'
 import styles from './page.module.css'
 
 export default function Page(): JSX.Element {
-  const hello = trpc.user.list.useQuery()
+  const hello = client.user.list.query()
   if (!hello.data) {
     return <div>Loading...</div>
   }

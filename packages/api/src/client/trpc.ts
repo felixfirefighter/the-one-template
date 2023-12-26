@@ -1,31 +1,17 @@
-import { httpBatchLink } from '@trpc/client'
-import { createTRPCNext } from '@trpc/next'
+import { createTRPCProxyClient, httpBatchLink } from '@trpc/client'
 import { AppRouter } from '..'
 import { getBaseUrl } from './url'
 
-export const trpc = createTRPCNext<AppRouter>({
-  config(opts) {
-    return {
-      links: [
-        httpBatchLink({
-          /**
-           * If you want to use SSR, you need to use the server's full URL
-           * @link https://trpc.io/docs/ssr
-           **/
-          url: `${getBaseUrl()}/api/trpc`,
-
-          // You can pass any HTTP headers you wish here
-          async headers() {
-            return {
-              // authorization: getAuthCookie(),
-            }
-          },
-        }),
-      ],
-    }
-  },
-  /**
-   * @link https://trpc.io/docs/ssr
-   **/
-  ssr: false,
+export const client = createTRPCProxyClient<AppRouter>({
+  links: [
+    httpBatchLink({
+      url: `${getBaseUrl()}/trpc`,
+      // You can pass any HTTP headers you wish here
+      async headers() {
+        return {
+          // authorization: getAuthCookie(),
+        }
+      },
+    }),
+  ],
 })
