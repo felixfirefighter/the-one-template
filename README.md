@@ -1,35 +1,26 @@
 # The One Template
 
-## TODO
-
-### Template
-
-- Add TRPC and zod
-- Add auth using `next-auth`
-- Add session to context
-- Add Redis using Upstash (optional)
-- Add adminProcedure, protectedProcedure
-- Add The One UI for web
-
 ## Development
 
-### Project structure
+### Prerequisite
 
-### Apps / Packages
+1. NodeJS 18 - https://nodejs.org/en
+2. PNPM - https://pnpm.io/
+3. Turbo CLI - https://turbo.build/repo/docs/reference/command-line-reference
+4. Fill up all the environment variables in `.env` file using `.env.template` as the template
 
-#### Generate new app / package
+### Apps and Packages
 
-Make sure you have `turbo` installed (https://turbo.build/repo/docs/installing)
+#### Apps
 
-```
-turbo gen workspace
-```
+`web`: The main website for the template
 
-#### Add package to a workspace
+#### Packages
 
-```
-pnpm add <package> --filter <workspace>
-```
+`@the-one/api`: API routers for apps
+`@the-one/database`: Schema and seed files powered by Prisma. 
+`@the-one/eslint-config`: Collection of internal eslint configurations
+`@the-one/typescript-config`: Collection of internal Typescript configurations
 
 ### Commit changes
 
@@ -41,39 +32,18 @@ git add .
 git cz
 ```
 
-### Make changes to Database Schema
-
-1. Make changes in `schema.prisma`.
-2. Create a new branch on PlanetScale (https://app.planetscale.com/)
-3. You should get a new `DATABASE_URL` from PlatnetScale. Update the `DATABASE_URL` in `.env` file.
-4. Run `pnpm db:generate` then `pnpm db:push` to push schema change to your PlatnetScale branch.
-5. Go back to PlatnetScale to create a Deploy Request for your branch
-6. Merge it to `main` branch
-
-Note: When you change `DATABASE_URL` to your branch's `DATABASE_URL`, you are essentially getting a new database so that you have a isolated database to play around with. Remember to switch back the original `DATABASE_URL` after merging to `main` branch if you want to play with existing data instead.
-
 ## Workstation
 
-### VSC
+### Extensions
 
-#### Extensions
+`Better Comments`: Improve your code commenting by annotating with alert, informational, TODOs, and more!
+`CSS Modules`: Visual Studio Code extension for CSS Modules
+`ESLint`: Integrates ESLint JavaScript into VS Code.
+`Prettier`: Code formatter using prettier
+`Prisma`: Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
 
-##### Better Comments
+### Core Dependencies
 
-Improve your code commenting by annotating with alert, informational, TODOs, and more!
-
-##### CSS Modules
-
-Visual Studio Code extension for CSS Modules
-
-##### ESLint
-
-Integrates ESLint JavaScript into VS Code.
-
-##### Prettier - Code formatter
-
-Code formatter using prettier
-
-##### Prisma
-
-Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
+[Turborepo](https://turbo.build/): TypeScript monorepo 
+[Prisma](https://www.prisma.io/): TypeScript ORM for accessing DB
+[tRPC](https://trpc.io/): Typesafe API
