@@ -18,9 +18,10 @@
 #### Packages
 
 `@the-one/api`: API routers for apps
-`@the-one/database`: Schema and seed files powered by Prisma. 
+`@the-one/database`: Schema and seed files powered by Prisma
 `@the-one/eslint-config`: Collection of internal eslint configurations
 `@the-one/typescript-config`: Collection of internal Typescript configurations
+`@the-one/ui`: Shared UI components
 
 ### Commit changes
 
@@ -47,3 +48,4 @@ git cz
 [Turborepo](https://turbo.build/): TypeScript monorepo 
 [Prisma](https://www.prisma.io/): TypeScript ORM for accessing DB
 [tRPC](https://trpc.io/): Typesafe API
+[Mantine](https://mantine.dev/): Fully featured React component library
