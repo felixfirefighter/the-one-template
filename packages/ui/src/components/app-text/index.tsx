@@ -1,41 +1,28 @@
 import { MantineColor, Text } from '@mantine/core'
-
-type TextSize =
-  | 'xs'
-  | 'sm'
-  | 'base'
-  | 'lg'
-  | 'xl'
-  | '2xl'
-  | '3xl'
-  | '4xl'
-  | '5xl'
-  | '6xl'
-  | '7xl'
+import { FONT_SIZE_MAPPER, FontSize, FontWeight, LINE_HEIGHT_MAPPER } from './types'
 
 interface Props {
-  size?: TextSize
+  size?: FontSize
   c?: MantineColor
   children?: React.ReactNode
+  fontWeight?: FontWeight
 }
 
-const FONT_SIZE_MAPPER: Record<TextSize, string> = {
-  xs: '12px',
-  sm: '14px',
-  base: '16px',
-  lg: '18px',
-  xl: '20px',
-  '2xl': '24px',
-  '3xl': '30px',
-  '4xl': '36px',
-  '5xl': '48px',
-  '6xl': '60px',
-  '7xl': '72px',
-}
-
-export const AppText: React.FC<Props> = ({ size = 'base', c, children }) => {
+export const AppText: React.FC<Props> = ({
+  size = 'base',
+  c,
+  fontWeight = '400',
+  children,
+}) => {
   return (
-    <Text size={FONT_SIZE_MAPPER[size]} c={c}>
+    <Text
+      size={FONT_SIZE_MAPPER[size]}
+      c={c}
+      style={{
+        fontWeight,
+        lineHeight: LINE_HEIGHT_MAPPER[size]
+      }}
+    >
       {children}
     </Text>
   )
