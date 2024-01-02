@@ -5,7 +5,6 @@ export default function Layout({
 }): JSX.Element {
   return (
     <main>
-      <div>Hello Examples</div>
       {children}
     </main>
   )
