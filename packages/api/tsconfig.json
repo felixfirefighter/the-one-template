@@ -2,9 +2,6 @@
   "extends": "@the-one/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": true,
-    "moduleResolution": "NodeNext"
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist"]

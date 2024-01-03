@@ -1,1 +1,1 @@
-export * from './client/index.tsx'
+export * from './client'

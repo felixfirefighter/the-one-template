@@ -4,8 +4,7 @@ import { httpBatchLink, loggerLink } from '@trpc/client'
 import { createTRPCReact } from '@trpc/react-query'
 import { useState } from 'react'
 import SuperJSON from 'superjson'
-import { WebRouter } from '../types/index.js'
-import { getBaseUrl } from '../utils/url.ts'
+import { WebRouter } from '../types/index'
 
 export const trpc = createTRPCReact<WebRouter>({
   unstable_overrides: {

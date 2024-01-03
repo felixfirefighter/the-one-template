@@ -1,5 +1,5 @@
-import { router } from "../index.ts";
-import { userRouter } from "./user.ts";
+import { router } from "../index";
+import { userRouter } from "./user";
 
 export const webRouter = router({
   user: userRouter,
