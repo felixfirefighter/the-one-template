@@ -1,12 +1,14 @@
 'use client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { httpBatchLink, loggerLink } from '@trpc/client'
-import { createTRPCReact } from '@trpc/react-query'
+import { CreateTRPCReact, createTRPCReact } from '@trpc/react-query'
 import { useState } from 'react'
 import SuperJSON from 'superjson'
-import { WebRouter } from '../types/index'
+import type { WebRouter } from '../types/index'
+import { getBaseUrl } from '../utils/url'
 
-export const trpc = createTRPCReact<WebRouter>({
+// TODO: Replace any with the proper type
+export const trpc: CreateTRPCReact<WebRouter, any, any> = createTRPCReact<WebRouter>({
   unstable_overrides: {
     useMutation: {
       async onSuccess(opts) {
@@ -32,6 +34,7 @@ export function ClientProvider(props: { children: React.ReactNode }) {
       transformer: SuperJSON,
     }),
   )
+
   return (
     <trpc.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
