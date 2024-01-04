@@ -3,6 +3,7 @@ import '@mantine/core/styles.css'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { ClientProvider } from '@the-one/api'
+import { appTheme } from '@the-one/ui'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,7 +19,7 @@ export default function RootLayout({
           <ColorSchemeScript />
         </head>
         <body className={inter.className}>
-          <MantineProvider>{children}</MantineProvider>
+          <MantineProvider theme={appTheme}>{children}</MantineProvider>
         </body>
       </html>
     </ClientProvider>
