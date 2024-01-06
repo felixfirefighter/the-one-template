@@ -6,7 +6,7 @@ import { OverviewRecentSales } from '../overview-recent-sales'
 
 export const OverviewMain = () => {
   return (
-    <Grid>
+    <Grid grow>
       <Grid.Col span={7}>
         <OverviewChart />
       </Grid.Col>

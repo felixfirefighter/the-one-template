@@ -1,20 +1,24 @@
-'use client'
-
+import { BarChart } from '@mantine/charts'
 import { Paper, useMantineTheme } from '@mantine/core'
-import { AppText } from '@the-one/ui'
-import { Bar, BarChart, ResponsiveContainer } from 'recharts'
-import { DATA } from './types'
+import { AppSpacing, AppText } from '@the-one/ui'
+import { DATA } from './data'
 
 export const OverviewChart = () => {
   const theme = useMantineTheme()
+
   return (
-    <Paper radius={'lg'} shadow="sm" p={24} withBorder>
-      <AppText fontWeight='500'>Overview</AppText>
-      <ResponsiveContainer width={'100%'} height={300}>
-        <BarChart data={DATA}>
-          <Bar dataKey="value" fill={theme.colors.dark[7]} />
-        </BarChart>
-      </ResponsiveContainer>
+    <Paper radius={'lg'} shadow="sm" p={AppSpacing['5xl']} withBorder>
+      <AppText fontWeight="500" size="lg" mb={AppSpacing['2xl']}>
+        Overview
+      </AppText>
+      <BarChart
+        h={340}
+        data={DATA}
+        dataKey="month"
+        series={[{ name: 'Total', color: theme.primaryColor }]}
+        tickLine="y"
+        
+      />
     </Paper>
   )
 }

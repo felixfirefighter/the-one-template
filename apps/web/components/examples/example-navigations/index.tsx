@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, NavLink, useMantineTheme } from '@mantine/core'
+import { Box, NavLink } from '@mantine/core'
 import { usePathname, useRouter } from 'next/navigation'
 import { EXAMPLE_NAVIGATIONS } from './types'
 
