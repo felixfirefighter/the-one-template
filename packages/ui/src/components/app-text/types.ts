@@ -1,7 +1,7 @@
 export type FontSize =
   | 'xs'
   | 'sm'
-  | 'base'
+  | 'md'
   | 'lg'
   | 'xl'
   | '2xl'
@@ -16,7 +16,7 @@ export type FontWeight = '300' | '400' | '500' | '600' | '700' | '800' | '900'
 export const FONT_SIZE_MAPPER: Record<FontSize, string> = {
   xs: '12px',
   sm: '14px',
-  base: '16px',
+  md: '16px',
   lg: '18px',
   xl: '20px',
   '2xl': '24px',
@@ -30,7 +30,7 @@ export const FONT_SIZE_MAPPER: Record<FontSize, string> = {
 export const LINE_HEIGHT_MAPPER: Record<FontSize, number> = {
   xs: 2,
   sm: 2,
-  base: 1.5,
+  md: 1.5,
   lg: 1.5,
   xl: 1.5,
   '2xl': 1.5,

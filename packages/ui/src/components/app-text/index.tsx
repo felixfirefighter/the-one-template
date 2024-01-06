@@ -16,7 +16,7 @@ interface Props {
 }
 
 export const AppText: React.FC<Props> = ({
-  size = 'base',
+  size = 'md',
   c,
   fontWeight = '400',
   ta,

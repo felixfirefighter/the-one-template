@@ -25,4 +25,10 @@ export const RECENT_SALES = [
     email: 'jessica.nguyen@email.com',
     amount: '+$29.00'
   },
+  {
+    img: '/dashboard/avatar-5.png',
+    username: 'Joseph Joestar',
+    email: 'joseph.joestar@email.com',
+    amount: '+$199.00'
+  },
 ]

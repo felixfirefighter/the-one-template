@@ -5,7 +5,6 @@ import { usePathname, useRouter } from 'next/navigation'
 import { EXAMPLE_NAVIGATIONS } from './types'
 
 export const ExampleNavigations = () => {
-  const theme = useMantineTheme()
   const router = useRouter()
   const pathname = usePathname()
 
@@ -14,7 +13,7 @@ export const ExampleNavigations = () => {
       {EXAMPLE_NAVIGATIONS.map((nav) => {
         return (
           <NavLink
-            style={{ borderRadius: theme.spacing.xl }}
+            style={{ borderRadius: 24 }}
             ta={'center'}
             key={nav.label}
             label={nav.label}

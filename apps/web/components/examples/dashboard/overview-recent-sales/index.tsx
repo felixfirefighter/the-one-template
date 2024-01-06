@@ -5,7 +5,7 @@ import { RECENT_SALES } from './data'
 export const OverviewRecentSales = () => {
   return (
     <Paper radius={'lg'} shadow="sm" p={24} withBorder>
-      <AppText fontWeight="500">Recent Sales</AppText>
+      <AppText fontWeight="500" size='lg' mb={'sm'}>Recent Sales</AppText>
       {RECENT_SALES.map((sale) => {
         return (
           <AppRichListItem
