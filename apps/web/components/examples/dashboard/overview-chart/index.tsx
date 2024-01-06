@@ -17,7 +17,6 @@ export const OverviewChart = () => {
         dataKey="month"
         series={[{ name: 'Total', color: theme.primaryColor }]}
         tickLine="y"
-        
       />
     </Paper>
   )
