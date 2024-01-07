@@ -9,7 +9,8 @@
   },
   "dependencies": {
     "@mantine/core": "^7.3.2",
-    "@mantine/hooks": "^7.3.2"
+    "@mantine/hooks": "^7.3.2",
+    "@tabler/icons-react": "^2.45.0"
   },
   "devDependencies": {
     "@the-one/eslint-config": "workspace:*",

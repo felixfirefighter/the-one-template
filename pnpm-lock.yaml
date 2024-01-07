@@ -214,6 +214,9 @@ importers:
       '@mantine/hooks':
         specifier: ^7.3.2
         version: 7.4.0(react@18.2.0)
+      '@tabler/icons-react':
+        specifier: ^2.45.0
+        version: 2.45.0(react@18.2.0)
     devDependencies:
       '@the-one/eslint-config':
         specifier: workspace:*

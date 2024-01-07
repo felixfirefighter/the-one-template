@@ -1,0 +1,9 @@
+.box {
+  line-height: 1;
+  border: 1px solid;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--mantine-color-gray-0);
+  }
+}
