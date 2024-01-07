@@ -7,7 +7,7 @@ interface Props {
   avatarSrc: string | null
   title?: string
   subtitle?: string
-  suffix?: string
+  suffix?: React.ReactNode
 }
 
 export const AppRichListItem: React.FC<Props> = ({
@@ -20,14 +20,14 @@ export const AppRichListItem: React.FC<Props> = ({
     <Flex align={'center'} py={AppSpacing.xl}>
       <Avatar src={avatarSrc} mr={AppSpacing.lg} />
       <Box px={AppSpacing.md} flex={1}>
-        <AppText fontWeight="500" size="md">
+        <AppText fontWeight="500" size="sm">
           {title}
         </AppText>
-        <AppText c="gray.7" size="md">
+        <AppText c="gray.6" size="sm">
           {subtitle}
         </AppText>
       </Box>
-      <AppText>{suffix}</AppText>
+      {suffix}
     </Flex>
   )
 }

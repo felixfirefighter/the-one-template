@@ -8,7 +8,7 @@ export const CreateAccountCard = () => {
       <AppText size="xl" fontWeight="700">
         Create an account
       </AppText>
-      <AppText c="gray.7" size="sm">
+      <AppText c="gray.6" size="sm" mb='xs'>
         Enter your email below to create an account
       </AppText>
 

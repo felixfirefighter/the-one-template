@@ -13,7 +13,9 @@ export const OverviewRecentSales = () => {
             avatarSrc={sale.img}
             title={sale.username}
             subtitle={sale.email}
-            suffix={sale.amount}
+            suffix={
+              <AppText size='sm'>{sale.amount}</AppText>
+            }
           />
         )
       })}

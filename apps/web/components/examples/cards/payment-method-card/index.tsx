@@ -6,7 +6,7 @@ import { useState } from 'react'
 import { DATA, MONTHS } from './data'
 
 export const PaymentMethodCard = () => {
-  const [active, setActive] = useState(3)
+  const [active, setActive] = useState(1)
 
   const years = Array.from({ length: 20 }, (_, i) => {
     const year = new Date().getFullYear() - i
@@ -21,7 +21,7 @@ export const PaymentMethodCard = () => {
       <AppText size="xl" fontWeight="700">
         Payment Method
       </AppText>
-      <AppText c="gray.7" size="sm">
+      <AppText c="gray.6" size="sm" mb='xs'>
         Add a new payment method to your account
       </AppText>
 

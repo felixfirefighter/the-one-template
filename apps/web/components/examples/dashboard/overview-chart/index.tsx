@@ -12,7 +12,7 @@ export const OverviewChart = () => {
         Overview
       </AppText>
       <BarChart
-        h={340}
+        h={310}
         data={DATA}
         dataKey="month"
         series={[{ name: 'Total', color: theme.primaryColor }]}

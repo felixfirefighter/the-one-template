@@ -1,4 +1,4 @@
-import { MantineColor, MantineSpacing, StyleProp, Text } from '@mantine/core'
+import { MantineColor, MantineLineHeight, MantineSpacing, StyleProp, Text } from '@mantine/core'
 import {
   FONT_SIZE_MAPPER,
   FontSize,
@@ -13,6 +13,7 @@ interface Props {
   children?: React.ReactNode
   fontWeight?: FontWeight
   mb?: StyleProp<MantineSpacing>
+  lh?: StyleProp<MantineLineHeight | number | (string & {})>
 }
 
 export const AppText: React.FC<Props> = ({
@@ -22,16 +23,17 @@ export const AppText: React.FC<Props> = ({
   ta,
   children,
   mb,
+  lh
 }) => {
   return (
     <Text
+      lh={lh || LINE_HEIGHT_MAPPER[size]}
       mb={mb}
       size={FONT_SIZE_MAPPER[size]}
       ta={ta}
       c={c}
       style={{
         fontWeight,
-        lineHeight: LINE_HEIGHT_MAPPER[size],
       }}
     >
       {children}
