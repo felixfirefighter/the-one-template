@@ -5,39 +5,29 @@ export const DATA = [
     img: '/dashboard/avatar-1.png',
     username: 'Abby Goodman',
     email: 'abby.goodman@email.com',
-    role: 'admin',
+    permission: 'edit',
   },
   {
     img: '/dashboard/avatar-2.png',
     username: 'Isaac Vu',
     email: 'isaac.vu@email.com',
-    role: 'owner'
+    permission: 'view'
   },
   {
     img: '/dashboard/avatar-3.png',
     username: 'Alex Low',
     email: 'alex.low@email.com',
-    role: 'member'
-  },
-  {
-    img: '/dashboard/avatar-5.png',
-    username: 'Joseph Joestar',
-    email: 'joseph.joestar@email.com',
-    role: 'member'
+    permission: 'edit'
   },
 ]
 
-export const ROLES = [
+export const PERMISSIONS = [
   {
-    label: 'Owner',
-    value: 'owner',
+    label: 'Can edit',
+    value: 'edit',
   },
   {
-    label: 'Admin',
-    value: 'admin',
-  },
-  {
-    label: 'Member',
-    value: 'member',
+    label: 'Can view',
+    value: 'view',
   },
 ]

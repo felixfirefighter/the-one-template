@@ -17,7 +17,7 @@ export const AppRichListItem: React.FC<Props> = ({
   suffix,
 }) => {
   return (
-    <Flex align={'center'} py={AppSpacing.xl}>
+    <Flex align={'center'} py={'xs'}>
       <Avatar src={avatarSrc} mr={AppSpacing.lg} />
       <Box px={AppSpacing.md} flex={1}>
         <AppText fontWeight="500" size="sm">
