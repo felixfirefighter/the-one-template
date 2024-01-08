@@ -5,6 +5,7 @@ import { CreateAccountCard } from '../create-account-card'
 import { PaymentMethodCard } from '../payment-method-card'
 import { TeamMembersCard } from '../team-members-card'
 import { ShareDocumentCard } from '../share-document-card'
+import { NotificationCard } from '../notification-card'
 
 export const CardGrid = () => {
   return (
@@ -18,6 +19,8 @@ export const CardGrid = () => {
         <TeamMembersCard />
         <Space h={'lg'} />
         <ShareDocumentCard />
+        <Space h={'lg'} />
+        <NotificationCard />
       </Grid.Col>
       <Grid.Col span={{ md: 6, xl: 4 }}>
         <CreateAccountCard />

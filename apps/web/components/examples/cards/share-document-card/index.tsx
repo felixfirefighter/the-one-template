@@ -19,14 +19,13 @@ export const ShareDocumentCard = () => {
         <TextInput flex={1} value="https://example.com/link/to/document/" readOnly/>
         <CopyButton value="https://example.com/link/to/document/">
           {({ copied, copy }) => (
-            <Button w={120} onClick={copy}>
+            <Button variant='filled' w={120} onClick={copy}>
               {copied ? 'Copied' : 'Copy Link'}
             </Button>
           )}
         </CopyButton>
       </Flex>
 
-      <Divider my={'md'}/>
 
       <AppText size='sm' fontWeight='500' mb="xs">People with access</AppText>
       {users.map((item) => {
