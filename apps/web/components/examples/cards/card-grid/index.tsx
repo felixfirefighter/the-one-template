@@ -7,6 +7,7 @@ import { TeamMembersCard } from '../team-members-card'
 import { ShareDocumentCard } from '../share-document-card'
 import { NotificationCard } from '../notification-card'
 import { ReportIssueCard } from '../report-issue-card'
+import { ProjectCard } from '../project-card'
 
 export const CardGrid = () => {
   return (
@@ -25,6 +26,8 @@ export const CardGrid = () => {
       </Grid.Col>
       <Grid.Col span={{ md: 6, xl: 4 }}>
         <ReportIssueCard />
+        <Space h={'lg'} />
+        <ProjectCard />
       </Grid.Col>
     </Grid>
   )
