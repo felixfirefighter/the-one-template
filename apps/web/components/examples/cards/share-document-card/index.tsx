@@ -1,4 +1,11 @@
-import { Button, CopyButton, Divider, Flex, Paper, Select, TextInput } from '@mantine/core'
+import {
+  Button,
+  CopyButton,
+  Flex,
+  Paper,
+  Select,
+  TextInput,
+} from '@mantine/core'
 import { AppRichListItem, AppText } from '@the-one/ui'
 import { useState } from 'react'
 import { DATA, PERMISSIONS } from './data'
@@ -15,19 +22,24 @@ export const ShareDocumentCard = () => {
         Anyone with the link can view this document
       </AppText>
 
-      <Flex gap='xs' my={'lg'}>
-        <TextInput flex={1} value="https://example.com/link/to/document/" readOnly/>
+      <Flex gap="xs" my={'lg'}>
+        <TextInput
+          flex={1}
+          value="https://example.com/link/to/document/"
+          readOnly
+        />
         <CopyButton value="https://example.com/link/to/document/">
           {({ copied, copy }) => (
-            <Button variant='filled' w={120} onClick={copy}>
+            <Button variant="filled" w={120} onClick={copy}>
               {copied ? 'Copied' : 'Copy Link'}
             </Button>
           )}
         </CopyButton>
       </Flex>
 
-
-      <AppText size='sm' fontWeight='500' mb="xs">People with access</AppText>
+      <AppText size="sm" fontWeight="500" mb="xs">
+        People with access
+      </AppText>
       {users.map((item) => {
         return (
           <AppRichListItem

@@ -1,8 +1,8 @@
 import { Box, Flex } from '@mantine/core'
-import clsx from 'clsx'
 import React from 'react'
 import { AppText } from '../app-text'
 import styles from './index.module.css'
+import clsx from 'clsx'
 
 interface Props {
   prefix?: React.ReactNode
@@ -25,7 +25,7 @@ export const AppSelectItem: React.FC<Props> = ({
   return (
     <Flex
       p={'xs'}
-      className={clsx(styles.container, { [styles.selected]: selected })}
+      className={clsx(styles.container, { [styles.selected!] : selected })}
       onClick={onClick}
     >
       {prefix}
