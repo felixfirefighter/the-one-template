@@ -1,25 +1,24 @@
-import { Avatar, Box, Flex } from '@mantine/core'
+import { Box, Flex } from '@mantine/core'
 import React from 'react'
-import { AppSpacing } from '../..'
 import { AppText } from '../app-text'
 
 interface Props {
-  avatarSrc: string | null
+  prefix?: React.ReactNode
   title?: string
   subtitle?: string
   suffix?: React.ReactNode
 }
 
 export const AppRichListItem: React.FC<Props> = ({
-  avatarSrc,
+  prefix,
   title,
   subtitle,
   suffix,
 }) => {
   return (
     <Flex align={'center'} py={'xs'}>
-      <Avatar src={avatarSrc} mr={AppSpacing.lg} />
-      <Box px={AppSpacing.md} flex={1}>
+      {prefix}
+      <Box flex={1}>
         <AppText fontWeight="500" size="sm">
           {title}
         </AppText>

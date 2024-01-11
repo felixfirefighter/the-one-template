@@ -1,4 +1,5 @@
 import {
+  Avatar,
   Button,
   CopyButton,
   Flex,
@@ -30,21 +31,21 @@ export const ShareDocumentCard = () => {
         />
         <CopyButton value="https://example.com/link/to/document/">
           {({ copied, copy }) => (
-            <Button variant="filled" w={120} onClick={copy}>
+            <Button variant="filled" w={110} onClick={copy}>
               {copied ? 'Copied' : 'Copy Link'}
             </Button>
           )}
         </CopyButton>
       </Flex>
 
-      <AppText size="sm" fontWeight="500" mb="xs">
+    <AppText size="sm" fontWeight="500" mb="xs">
         People with access
       </AppText>
       {users.map((item) => {
         return (
           <AppRichListItem
             key={item.username}
-            avatarSrc={item.img}
+            prefix={<Avatar src={item.img} mr='xs' />}
             title={item.username}
             subtitle={item.email}
             suffix={

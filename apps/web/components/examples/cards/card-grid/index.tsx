@@ -8,6 +8,7 @@ import { ShareDocumentCard } from '../share-document-card'
 import { NotificationCard } from '../notification-card'
 import { ReportIssueCard } from '../report-issue-card'
 import { ProjectCard } from '../project-card'
+import { CookieSettingsCard } from '../cookie-settings-card'
 
 export const CardGrid = () => {
   return (
@@ -28,6 +29,8 @@ export const CardGrid = () => {
         <ReportIssueCard />
         <Space h={'lg'} />
         <ProjectCard />
+        <Space h={'lg'} />
+        <CookieSettingsCard />
       </Grid.Col>
     </Grid>
   )
