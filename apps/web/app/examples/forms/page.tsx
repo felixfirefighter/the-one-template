@@ -1,10 +1,5 @@
-import { Container } from "@mantine/core";
+import { redirect } from 'next/navigation'
 
-export default function Page(): JSX.Element {
-    return (
-      <Container>
-        Hello Forms
-      </Container>
-    )
-  }
-  
+export default function Page() {
+  redirect('/examples/forms/profile')
+}

@@ -11,3 +11,7 @@ export const AppSpacing = {
   '6xl': 32,
   '7xl': 42,
 }
+
+export const AppWidth = {
+  Navbar: 267
+}

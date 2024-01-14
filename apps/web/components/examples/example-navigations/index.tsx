@@ -17,7 +17,7 @@ export const ExampleNavigations = () => {
             ta={'center'}
             key={nav.label}
             label={nav.label}
-            active={pathname === nav.route}
+            active={pathname?.startsWith(nav.route)}
             onClick={() => router.push(nav.route)}
           ></NavLink>
         )
