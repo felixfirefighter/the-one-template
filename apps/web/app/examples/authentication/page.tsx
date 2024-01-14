@@ -11,7 +11,7 @@ export default function Page(): JSX.Element {
           h="100%"
           direction={'column'}
           flex={1}
-          bg={'dark'}
+          bg={'dark.9'}
           c="gray.2"
           p="xl"
           style={{
