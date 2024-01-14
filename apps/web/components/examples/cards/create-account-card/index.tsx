@@ -1,6 +1,6 @@
 import { Button, Divider, Flex, Paper, TextInput } from '@mantine/core'
 import { IconBrandGithub, IconBrandGoogleFilled } from '@tabler/icons-react'
-import { AppSpacing, AppText } from '@the-one/ui'
+import { AppSize, AppText } from '@the-one/ui'
 
 export const CreateAccountCard = () => {
   return (
@@ -12,7 +12,7 @@ export const CreateAccountCard = () => {
         Enter your email below to create an account
       </AppText>
 
-      <Flex py={AppSpacing['3xl']} gap={AppSpacing['2xl']}>
+      <Flex py={AppSize['3xl']} gap={AppSize['2xl']}>
         <Button
           fullWidth
           leftSection={<IconBrandGithub />}
@@ -31,9 +31,9 @@ export const CreateAccountCard = () => {
         </Button>
       </Flex>
       <Divider label={<AppText size="xs">OR CONTINUE WITH</AppText>}></Divider>
-      <TextInput py={AppSpacing.md} label="Email" placeholder="theone@email.com"></TextInput>
-      <TextInput py={AppSpacing.md} type="password" label="Password"></TextInput>
-      <Button fullWidth mt={AppSpacing['3xl']}>Create account</Button>
+      <TextInput py={AppSize.md} label="Email" placeholder="theone@email.com"></TextInput>
+      <TextInput py={AppSize.md} type="password" label="Password"></TextInput>
+      <Button fullWidth mt={AppSize['3xl']}>Create account</Button>
     </Paper>
   )
 }

@@ -1,4 +1,4 @@
-import { Paper } from '@mantine/core'
+import { Avatar, Paper } from '@mantine/core'
 import { AppRichListItem, AppText } from '@the-one/ui'
 import { RECENT_SALES } from './data'
 
@@ -9,8 +9,8 @@ export const OverviewRecentSales = () => {
       {RECENT_SALES.map((sale) => {
         return (
           <AppRichListItem
+            prefix={<Avatar src={sale.img} mr='sm'></Avatar>}
             key={sale.username}
-            avatarSrc={sale.img}
             title={sale.username}
             subtitle={sale.email}
             suffix={

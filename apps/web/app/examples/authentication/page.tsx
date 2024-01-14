@@ -1,6 +1,6 @@
 import { Box, Button, Container, Divider, Flex, TextInput } from '@mantine/core'
 import { IconBrandGoogleFilled, IconTriangle } from '@tabler/icons-react'
-import { AppSpacing, AppText } from '@the-one/ui'
+import { AppSize, AppText } from '@the-one/ui'
 import Link from 'next/link'
 
 export default function Page(): JSX.Element {
@@ -15,8 +15,8 @@ export default function Page(): JSX.Element {
           c="gray.2"
           p="xl"
           style={{
-            borderTopLeftRadius: AppSpacing['3xl'],
-            borderBottomLeftRadius: AppSpacing['3xl'],
+            borderTopLeftRadius: AppSize['3xl'],
+            borderBottomLeftRadius: AppSize['3xl'],
           }}
           justify={'space-between'}
         >

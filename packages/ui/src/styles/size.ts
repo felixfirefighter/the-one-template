@@ -1,4 +1,4 @@
-export const AppSpacing = {
+export const AppSize = {
   xs: 2,
   sm: 4,
   md: 6,

@@ -1,6 +1,6 @@
 import { Box, useMantineTheme } from '@mantine/core'
 import React from 'react'
-import { AppSpacing } from '../..'
+import { AppSize } from '../..'
 import { AppText } from '../app-text'
 import styles from './index.module.css'
 
@@ -24,7 +24,7 @@ export const AppSimpleSelectCard: React.FC<Props> = ({ active, flex, title, icon
       py={'md'}
       px={'xl'}
       style={{
-        borderRadius: AppSpacing.md,
+        borderRadius: AppSize.md,
         borderColor: active ? theme.colors.dark[7] : theme.colors.gray[2],
       }}
       onClick={onClick}

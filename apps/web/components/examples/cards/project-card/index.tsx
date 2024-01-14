@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Paper, Pill } from '@mantine/core'
 import { IconCircle, IconSquare, IconStar } from '@tabler/icons-react'
-import { AppSpacing, AppText } from '@the-one/ui'
+import { AppSize, AppText } from '@the-one/ui'
 import { useState } from 'react'
 
 export const ProjectCard = () => {
@@ -17,7 +17,7 @@ export const ProjectCard = () => {
           </AppText>
         </Box>
         <Button
-          leftSection={<IconStar size={AppSpacing['3xl']} />}
+          leftSection={<IconStar size={AppSize['3xl']} />}
           rightSection={<Pill w={30}>{isStarred ? 1 : 0}</Pill>}
           onClick={() => setIsStarred(!isStarred)}
         >
@@ -27,14 +27,14 @@ export const ProjectCard = () => {
 
       <Flex align={'center'} gap="md" c="gray.6">
         <Flex align={'center'} gap="xs">
-          <IconSquare size={AppSpacing.xl} />
+          <IconSquare size={AppSize.xl} />
           <AppText size="sm" lh={1}>
             TypeScript
           </AppText>
         </Flex>
 
         <Flex align={'center'} gap="xs">
-          <IconCircle size={AppSpacing.xl} />
+          <IconCircle size={AppSize.xl} />
           <AppText size="sm" lh={1}>
             React
           </AppText>

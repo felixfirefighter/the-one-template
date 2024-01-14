@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Flex, Paper, Select, TextInput } from '@mantine/core'
-import { AppSimpleSelectCard, AppSpacing, AppText } from '@the-one/ui'
+import { AppSimpleSelectCard, AppSize, AppText } from '@the-one/ui'
 import { useState } from 'react'
 import { DATA, MONTHS } from './data'
 
@@ -27,8 +27,8 @@ export const PaymentMethodCard = () => {
 
       <Flex
         justify={'space-between'}
-        py={AppSpacing['3xl']}
-        gap={AppSpacing['2xl']}
+        py={AppSize['3xl']}
+        gap={AppSize['2xl']}
       >
         {DATA.map((item) => {
           return (
@@ -44,22 +44,22 @@ export const PaymentMethodCard = () => {
         })}
       </Flex>
       <TextInput
-        py={AppSpacing.md}
+        py={AppSize.md}
         label="Name"
         placeholder="John Doe"
       ></TextInput>
 
-      <Flex gap={'md'} py={AppSpacing.md}>
+      <Flex gap={'md'} py={AppSize.md}>
         <TextInput flex={3} type="number" placeholder='1234123412341234' label="Card number"></TextInput>
         <TextInput flex={1} type="number" placeholder='565' label="CVC"></TextInput>
       </Flex>
 
-      <Flex gap={'md'} py={AppSpacing.md}>
+      <Flex gap={'md'} py={AppSize.md}>
         <Select label="Expiration" placeholder="Month" data={MONTHS}></Select>
         <Select label=" " placeholder="Year" data={years}></Select>
       </Flex>
 
-      <Button fullWidth mt={AppSpacing['3xl']}>
+      <Button fullWidth mt={AppSize['3xl']}>
         Continue
       </Button>
     </Paper>
