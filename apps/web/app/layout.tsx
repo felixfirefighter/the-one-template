@@ -1,6 +1,7 @@
 import '@mantine/charts/styles.css'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css'
+import '@mantine/dates/styles.css'
 import { ClientProvider } from '@the-one/api'
 import { appTheme } from '@the-one/ui'
 import { Inter } from 'next/font/google'
