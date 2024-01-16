@@ -7,7 +7,7 @@ import {
   Textarea,
 } from '@mantine/core'
 import { AppText } from '@the-one/ui'
-import { UrlInputs } from '../../../../components/forms/profile/url-inputs'
+import { UrlInputs } from '../../../../components/examples/forms/profile/url-inputs'
 
 export default function Page(): JSX.Element {
   return (

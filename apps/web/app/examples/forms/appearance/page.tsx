@@ -3,10 +3,12 @@
 import { Box, Button, Container, Divider, Select } from '@mantine/core'
 import { AppText } from '@the-one/ui'
 import { useState } from 'react'
+import { ThemeCards } from '../../../../components/examples/forms/appearance/theme-cards'
 import { FONTS } from './data'
 
 export default function Page(): JSX.Element {
   const [font, setFont] = useState('inter')
+  const [theme, setTheme] = useState()
 
   return (
     <Container size={'sm'} m={0}>
@@ -29,7 +31,10 @@ export default function Page(): JSX.Element {
             setFont(value)
           }
         }}
+        mb={'lg'}
       ></Select>
+
+      <ThemeCards />
 
       <Box py={'xl'}>
         <Button>Update appearance</Button>
