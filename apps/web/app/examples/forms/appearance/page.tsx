@@ -8,7 +8,6 @@ import { FONTS } from './data'
 
 export default function Page(): JSX.Element {
   const [font, setFont] = useState('inter')
-  const [theme, setTheme] = useState()
 
   return (
     <Container size={'sm'} m={0}>

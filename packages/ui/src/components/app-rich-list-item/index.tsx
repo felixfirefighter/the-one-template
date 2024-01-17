@@ -22,7 +22,7 @@ export const AppRichListItem: React.FC<Props> = ({
         <AppText fontWeight="500" size="sm">
           {title}
         </AppText>
-        <AppText c="gray.6" size="sm">
+        <AppText c="gray.6" size="xs">
           {subtitle}
         </AppText>
       </Box>

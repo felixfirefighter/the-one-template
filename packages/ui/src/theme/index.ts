@@ -11,12 +11,27 @@ export const appTheme: MantineThemeOverride = createTheme({
         }
       }
     },
+    Divider: {
+      styles: {
+        root: {
+          borderColor: '#E9ECEF' // gray.2
+        }
+      }
+    },
     NavLink: {
       styles: {
         root: {
-          borderRadius: AppSize.md,
+          borderRadius: AppSize.lg,
         },
       },
     },
+    Paper: {
+      styles: {
+        root: {
+          borderRadius: AppSize.lg,
+          borderColor: '#E9ECEF' // gray.2
+        }
+      }
+    }
   },
 })
