@@ -30,8 +30,10 @@ export default function Page(): JSX.Element {
 
       <Divider my={'lg'}></Divider>
 
+      <AppText size="md" fontWeight="500">
+        Notify me about:
+      </AppText>
       <Radio.Group
-        label="Notify me about:"
         onChange={(e) => setNotification(e)}
         value={notification}
         mb={'xl'}
@@ -48,7 +50,7 @@ export default function Page(): JSX.Element {
         })}
       </Radio.Group>
 
-      <AppText size="sm" fontWeight="500">
+      <AppText size="md" fontWeight="500">
         Email Notifications
       </AppText>
 
