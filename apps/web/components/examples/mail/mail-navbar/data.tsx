@@ -1,4 +1,4 @@
-import { IconAlertCircle, IconArchive, IconFile, IconInbox, IconSend, IconTrash, IconUsersGroup } from '@tabler/icons-react'
+import { IconAlertCircle, IconArchive, IconFile, IconInbox, IconMessage, IconSend, IconShoppingCart, IconTicket, IconTrash, IconUsersGroup } from '@tabler/icons-react'
 
 export const NAV_LINKS = [
   {
@@ -34,11 +34,30 @@ export const GROUP_LINKS = [
   {
     label: 'Social',
     icon: <IconUsersGroup stroke={1} />,
+    count: 981,
     active: false
   },
   {
     label: 'Updates',
     icon: <IconAlertCircle stroke={1} />,
+    count: 51,
+    active: false
+  },
+  {
+    label: 'Forums',
+    icon: <IconMessage stroke={1} />,
+    count: 139,
+    active: false
+  },
+  {
+    label: 'Shopping',
+    icon: <IconShoppingCart stroke={1} />,
+    count: 7,
+    active: false
+  },
+  {
+    label: 'Promotions',
+    icon: <IconTicket stroke={1} />,
     active: false
   },
 ]
