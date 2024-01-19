@@ -1,19 +1,14 @@
-import { Box, Flex, SegmentedControl } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+'use client'
 
-export const metadata = {
-  title: 'Mail - The One',
-}
+import { Box, Flex, NavLink } from '@mantine/core'
+import { AppWidth } from '@the-one/ui'
+import { MailNavbar } from '../../../components/examples/mail/mail-navbar'
 
 export default function Page(): JSX.Element {
   return (
-    <Box p={'md'}>
-      <Flex mb={'sm'} justify={'space-between'}>
-        <AppText size="3xl" fontWeight="700">
-          Mail
-        </AppText>
-      </Flex>
-      <SegmentedControl data={['Overview', 'Analytics', 'Report']} />
-    </Box>
+    <Flex>
+      <MailNavbar />
+      <Box>Inbox</Box>
+    </Flex>
   )
 }

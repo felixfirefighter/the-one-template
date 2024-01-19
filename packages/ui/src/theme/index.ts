@@ -21,7 +21,8 @@ export const appTheme: MantineThemeOverride = createTheme({
     NavLink: {
       styles: {
         root: {
-          borderRadius: AppSize.lg,
+          borderRadius: AppSize['6xl'],
+          fontWeight: 500,
         },
       },
     },

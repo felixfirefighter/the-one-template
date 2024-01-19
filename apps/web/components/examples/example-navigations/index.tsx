@@ -13,8 +13,6 @@ export const ExampleNavigations = () => {
       {EXAMPLE_NAVIGATIONS.map((nav) => {
         return (
           <NavLink
-            style={{ borderRadius: 24 }}
-            ta={'center'}
             key={nav.label}
             label={nav.label}
             active={pathname?.startsWith(nav.route)}
