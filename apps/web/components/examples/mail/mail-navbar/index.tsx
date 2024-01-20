@@ -1,11 +1,22 @@
-import { Box, Divider, NavLink } from '@mantine/core'
+import { Box, Divider, NavLink, Select } from '@mantine/core'
 import { AppText, AppWidth } from '@the-one/ui'
-import { GROUP_LINKS, NAV_LINKS } from './data'
+import { ACCOUNTS, GROUP_LINKS, NAV_LINKS } from './data'
 import styles from './index.module.css'
+import { useState } from 'react'
 
 export const MailNavbar = () => {
+
+  const [activeAccount, setActiveAccount] = useState(ACCOUNTS[0])
+
   return (
     <Box w={AppWidth.Navbar} p={'sm'} className={styles.box}>
+      <Select data={ACCOUNTS} leftSection={activeAccount?.icon} value={activeAccount?.value} onChange={(value) => {
+        const newAccount = ACCOUNTS.find(account => account.value === value)
+        setActiveAccount(newAccount)
+      }}></Select>
+
+      <Divider my='md'></Divider>
+
       {NAV_LINKS.map((link) => {
         return (
           <NavLink

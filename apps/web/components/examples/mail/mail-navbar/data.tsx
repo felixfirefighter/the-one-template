@@ -1,4 +1,37 @@
-import { IconAlertCircle, IconArchive, IconFile, IconInbox, IconMessage, IconSend, IconShoppingCart, IconTicket, IconTrash, IconUsersGroup } from '@tabler/icons-react'
+import {
+  IconAlertCircle,
+  IconArchive,
+  IconBrandGoogleFilled,
+  IconCloudFilled,
+  IconFile,
+  IconInbox,
+  IconMessage,
+  IconSend,
+  IconShoppingCart,
+  IconTicket,
+  IconTrash,
+  IconTriangleFilled,
+  IconUsersGroup,
+} from '@tabler/icons-react'
+import { AppSize } from '@the-one/ui'
+
+export const ACCOUNTS = [
+  {
+    label: 'johndoe@theone.com',
+    value: 'johndoe@theone.com',
+    icon: <IconTriangleFilled size={AppSize['4xl']} />,
+  },
+  {
+    label: 'johndoe@gmail.com',
+    value: 'johndoe@gmail.com',
+    icon: <IconBrandGoogleFilled size={AppSize['4xl']} />,
+  },
+  {
+    label: 'johndoe@icloud.com',
+    value: 'johndoe@icloud.com',
+    icon: <IconCloudFilled size={AppSize['4xl']} />,
+  },
+]
 
 export const NAV_LINKS = [
   {
@@ -35,29 +68,29 @@ export const GROUP_LINKS = [
     label: 'Social',
     icon: <IconUsersGroup stroke={1} />,
     count: 981,
-    active: false
+    active: false,
   },
   {
     label: 'Updates',
     icon: <IconAlertCircle stroke={1} />,
     count: 51,
-    active: false
+    active: false,
   },
   {
     label: 'Forums',
     icon: <IconMessage stroke={1} />,
     count: 139,
-    active: false
+    active: false,
   },
   {
     label: 'Shopping',
     icon: <IconShoppingCart stroke={1} />,
     count: 7,
-    active: false
+    active: false,
   },
   {
     label: 'Promotions',
     icon: <IconTicket stroke={1} />,
-    active: false
+    active: false,
   },
 ]
