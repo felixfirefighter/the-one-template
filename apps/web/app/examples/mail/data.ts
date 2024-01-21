@@ -1,6 +1,7 @@
 import { subDays } from 'date-fns'
+import { InboxMail } from './types'
 
-export const MAILS = [
+export const MAILS: InboxMail[] = [
   {
     name: 'Alex Low',
     title: 'Meeting Tomorrow',

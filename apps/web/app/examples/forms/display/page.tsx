@@ -29,6 +29,7 @@ export default function Page(): JSX.Element {
       {sidebarDisplays.map((display) => {
         return (
           <Checkbox
+            key={display.label}
             label={display.label}
             checked={display.value}
             mb={'xs'}

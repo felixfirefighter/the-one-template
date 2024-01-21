@@ -1,12 +1,17 @@
 import { Box, Divider, Pill, TextInput } from '@mantine/core'
 import { IconSearch } from '@tabler/icons-react'
-import { AppSize, AppText } from '@the-one/ui'
+import { AppInboxCard, AppSize, AppText } from '@the-one/ui'
 import { formatDistance } from 'date-fns'
 import { MAILS } from '../../../../app/examples/mail/data'
-import { InboxCard } from '../inbox-card'
+import { InboxMail } from '../../../../app/examples/mail/types'
 import styles from './index.module.css'
 
-export const Inbox = () => {
+interface Props {
+  activeMail: InboxMail
+  setActiveMail: (mail: InboxMail) => void
+}
+
+export const Inbox: React.FC<Props> = ({ activeMail, setActiveMail }) => {
   return (
     <Box flex={1} className={styles.container}>
       <Box p="sm">
@@ -27,11 +32,13 @@ export const Inbox = () => {
       <Box px="sm" className={styles.mails}>
         {MAILS.map((mail) => {
           return (
-            <InboxCard
+            <AppInboxCard
               key={mail.title}
               header={mail.title}
               title={mail.name}
               description={mail.content}
+              active={activeMail.title === mail.title}
+              onClick={() => setActiveMail(mail)}
               rightSection={
                 <AppText size="sm" c="gray.6">
                   {formatDistance(mail.date, new Date(), { addSuffix: true })}

@@ -1,10 +1,14 @@
-import { Box, TextInput } from '@mantine/core'
-import { IconSearch } from '@tabler/icons-react'
+import { Box } from '@mantine/core'
+import { InboxMail } from '../../../../app/examples/mail/types'
 
-export const MailboxContent = () => {
+interface Props {
+  activeMail: InboxMail
+}
+
+export const MailboxContent: React.FC<Props> = ({ activeMail }) => {
   return (
     <Box flex={1} p="md">
-      <TextInput placeholder="Search" leftSection={<IconSearch />}></TextInput>
+      {activeMail.content}
     </Box>
   )
 }
