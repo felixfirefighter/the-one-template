@@ -18,14 +18,20 @@ export const InboxCard: React.FC<Props> = ({
   rightSection,
 }) => {
   return (
-    <Paper>
-      <Flex>
-        <AppText>{header}</AppText>
+    <Paper withBorder p="sm" mb={'xs'} shadow="none">
+      <Flex justify={'space-between'}>
+        <AppText fontWeight="700" size="sm">
+          {header}
+        </AppText>
         {rightSection}
       </Flex>
-      <AppText>{title}</AppText>
-      <AppText>{description}</AppText>
-      {bottomSection}
+      <AppText size="sm" mb={'xs'}>
+        {title}
+      </AppText>
+      <AppText lineClamp={2} fontWeight="500" c="gray.6" size="sm" mb={'xs'}>
+        {description}
+      </AppText>
+      <Flex>{bottomSection}</Flex>
     </Paper>
   )
 }

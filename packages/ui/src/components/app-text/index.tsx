@@ -16,6 +16,7 @@ interface Props {
   fontWeight?: FontWeight
   mb?: StyleProp<MantineSpacing>
   lh?: StyleProp<MantineLineHeight | number | (string & {})>
+  lineClamp?: number
 }
 
 export const AppText: React.FC<Props> = ({
@@ -26,11 +27,13 @@ export const AppText: React.FC<Props> = ({
   ta,
   children,
   mb,
-  lh
+  lh,
+  lineClamp
 }) => {
   return (
     <Text
       w={w}
+      lineClamp={lineClamp}
       className={styles.text}
       lh={lh || LINE_HEIGHT_MAPPER[size]}
       mb={mb}
