@@ -15,3 +15,8 @@ export const AppSize = {
 export const AppWidth = {
   Navbar: 267
 }
+
+export const AppIconStroke = {
+  sm: 1,
+  md: 1.5,
+}
