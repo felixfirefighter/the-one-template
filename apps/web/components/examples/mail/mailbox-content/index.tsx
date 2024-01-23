@@ -1,8 +1,8 @@
 import { ActionIcon, Box, Divider, Flex, Menu, Tooltip } from '@mantine/core'
+import { IconDotsVertical } from '@tabler/icons-react'
+import { AppIconStroke, AppText } from '@the-one/ui'
 import { InboxMail } from '../../../../app/examples/mail/types'
 import { LEFT_ACTION_BUTTONS, MENU_ITEMS, RIGHT_ACTION_BUTTONS } from './data'
-import { IconDots, IconDotsVertical } from '@tabler/icons-react'
-import { AppIconStroke } from '@the-one/ui'
 
 interface Props {
   activeMail: InboxMail
@@ -35,28 +35,36 @@ export const MailboxContent: React.FC<Props> = ({ activeMail }) => {
             )
           })}
 
-          <Divider orientation='vertical' />
+          <Divider orientation="vertical" />
 
-          <Menu position='bottom-end'>
+          <Menu position="bottom-end">
             <Menu.Target>
-              <ActionIcon variant='subtle' size={'md'} ml={'xs'}>
-                <IconDotsVertical stroke={AppIconStroke.md}/>
+              <ActionIcon variant="subtle" size={'md'} ml={'xs'}>
+                <IconDotsVertical stroke={AppIconStroke.md} />
               </ActionIcon>
             </Menu.Target>
             <Menu.Dropdown>
               {MENU_ITEMS.map((item) => {
-                return (
-                  <Menu.Item key={item.label}>
-                    {item.label}
-                  </Menu.Item>
-                )
+                return <Menu.Item key={item.label}>{item.label}</Menu.Item>
               })}
-            </Menu.Dropdown> 
+            </Menu.Dropdown>
           </Menu>
         </Flex>
       </Flex>
 
       <Divider />
+
+      <Box p='sm'>
+        
+      </Box>
+
+      <Divider />
+
+      <Box p="sm">
+        <AppText size='sm' style={{ whiteSpace: 'pre-wrap' }}>
+          {activeMail.content}
+        </AppText>
+      </Box>
     </Box>
   )
 }
