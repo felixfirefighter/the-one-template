@@ -1,6 +1,7 @@
 import { ActionIcon, Box, Divider, Flex, Menu, Tooltip } from '@mantine/core'
 import { IconDotsVertical } from '@tabler/icons-react'
-import { AppIconStroke, AppText } from '@the-one/ui'
+import { AppIconStroke, AppProfileLogo, AppText } from '@the-one/ui'
+import { format } from 'date-fns'
 import { InboxMail } from '../../../../app/examples/mail/types'
 import { LEFT_ACTION_BUTTONS, MENU_ITEMS, RIGHT_ACTION_BUTTONS } from './data'
 
@@ -54,14 +55,31 @@ export const MailboxContent: React.FC<Props> = ({ activeMail }) => {
 
       <Divider />
 
-      <Box p='sm'>
-        
+      <Box p="sm">
+        <Flex justify={'space-between'}>
+          <Flex>
+            <AppProfileLogo username={activeMail.name}></AppProfileLogo>
+
+            <Box mx={'xs'}>
+              <AppText size="sm" fontWeight="700">
+                {activeMail.name}
+              </AppText>
+              <AppText size="sm" c="gray.7">
+                {activeMail.title}
+              </AppText>
+            </Box>
+          </Flex>
+
+          <AppText size="sm" c="gray.6">
+            {format(activeMail.date, 'PPpp')}
+          </AppText>
+        </Flex>
       </Box>
 
       <Divider />
 
       <Box p="sm">
-        <AppText size='sm' style={{ whiteSpace: 'pre-wrap' }}>
+        <AppText size="sm" style={{ whiteSpace: 'pre-wrap' }}>
           {activeMail.content}
         </AppText>
       </Box>

@@ -254,6 +254,9 @@ importers:
       '@the-one/typescript-config':
         specifier: workspace:*
         version: link:../typescript-config
+      '@the-one/utils':
+        specifier: workspace:*
+        version: link:../utils
       '@types/eslint':
         specifier: ^8.44.7
         version: 8.56.1
@@ -281,6 +284,27 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      typescript:
+        specifier: ^5.2.2
+        version: 5.3.3
+
+  packages/utils:
+    devDependencies:
+      '@the-one/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@the-one/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      '@types/eslint':
+        specifier: ^8.44.7
+        version: 8.56.1
+      '@types/node':
+        specifier: ^20.5.2
+        version: 20.10.6
+      eslint:
+        specifier: ^8.53.0
+        version: 8.56.0
       typescript:
         specifier: ^5.2.2
         version: 5.3.3
