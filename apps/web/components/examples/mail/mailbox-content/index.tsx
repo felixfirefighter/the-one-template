@@ -1,17 +1,26 @@
-import { ActionIcon, Box, Divider, Flex, Menu, Tooltip } from '@mantine/core'
+import {
+  ActionIcon,
+  Box,
+  Button,
+  Divider,
+  Flex,
+  Menu,
+  Textarea,
+  Tooltip,
+} from '@mantine/core'
 import { IconDotsVertical } from '@tabler/icons-react'
 import { AppIconStroke, AppProfileLogo, AppText } from '@the-one/ui'
 import { format } from 'date-fns'
 import { InboxMail } from '../../../../app/examples/mail/types'
 import { LEFT_ACTION_BUTTONS, MENU_ITEMS, RIGHT_ACTION_BUTTONS } from './data'
-
+import styles from './index.module.css'
 interface Props {
   activeMail: InboxMail
 }
 
 export const MailboxContent: React.FC<Props> = ({ activeMail }) => {
   return (
-    <Box flex={1}>
+    <Flex flex={1} direction={'column'}>
       <Flex p="sm" justify={'space-between'}>
         <Flex py={4}>
           {LEFT_ACTION_BUTTONS.map((button) => {
@@ -78,11 +87,18 @@ export const MailboxContent: React.FC<Props> = ({ activeMail }) => {
 
       <Divider />
 
-      <Box p="sm">
+      <Box p="sm" flex={1} className={styles.content}>
         <AppText size="sm" style={{ whiteSpace: 'pre-wrap' }}>
           {activeMail.content}
         </AppText>
       </Box>
-    </Box>
+              
+      <Divider />
+
+      <Box p="sm" ta='right'>
+        <Textarea rows={4} mb={'xs'} placeholder={`Reply ${activeMail.name}`}></Textarea>
+        <Button ta={'right'}>Send</Button>
+      </Box>
+    </Flex>
   )
 }
