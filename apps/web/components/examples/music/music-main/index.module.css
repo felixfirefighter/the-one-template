@@ -1,0 +1,21 @@
+.topPick {
+  display: flex;
+  overflow-x: scroll;
+  width: 100vh;
+}
+
+.imageContainer {
+  width: 250px;
+  height: 350px;
+  border-radius: var(--mantine-radius-md);
+
+  overflow: hidden;
+}
+
+.image {
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
