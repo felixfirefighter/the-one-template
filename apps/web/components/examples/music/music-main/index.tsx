@@ -1,17 +1,8 @@
-'use client'
-
-import {
-  Box,
-  Button,
-  Flex,
-  Image,
-  Paper,
-  SegmentedControl,
-} from '@mantine/core'
+import { Box, Button, Flex, SegmentedControl } from '@mantine/core'
 import { IconPlus } from '@tabler/icons-react'
-import { AppSize, AppText } from '@the-one/ui'
-import { CONTROLS, MAIN_MUSICS } from './data'
-import styles from './index.module.css'
+import { AppSize } from '@the-one/ui'
+import { CONTROLS } from './data'
+import { MusicView } from '../music-view'
 
 export const MusicMain = () => {
   return (
@@ -23,38 +14,7 @@ export const MusicMain = () => {
         </Button>
       </Flex>
 
-      <AppText fontWeight="600" size="2xl">
-        Listen Now
-      </AppText>
-      <AppText c="gray.6">Top picks for you.</AppText>
-
-      <Box my={'md'} className={styles.topPick}>
-        {MAIN_MUSICS.map((music, index) => {
-          return (
-            <Paper
-              shadow="none"
-              key={music.title}
-              mr={index < MAIN_MUSICS.length ? 'md' : 0}
-            >
-              <Box className={styles.imageContainer} mb={'xs'}>
-                <Image
-                  radius={'md'}
-                  h={350}
-                  w={250}
-                  src={music.image}
-                  className={styles.image}
-                ></Image>
-              </Box>
-              <AppText fontWeight="600" size="sm">
-                {music.title}
-              </AppText>
-              <AppText c="gray.6" size="sm">
-                {music.name}
-              </AppText>
-            </Paper>
-          )
-        })}
-      </Box>
+      <MusicView />
     </Box>
   )
 }
