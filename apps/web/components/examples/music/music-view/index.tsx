@@ -5,7 +5,7 @@ import styles from './index.module.css'
 
 export const MusicView = () => {
   return (
-    <Box>
+    <Box flex={1}>
       <AppText fontWeight="600" size="2xl">
         Listen Now
       </AppText>
@@ -42,7 +42,7 @@ export const MusicView = () => {
       </AppText>
       <AppText c="gray.6">Your personal playlists.</AppText>
 
-      <Box my={'md'} className={styles.madeForYou}>
+      {/* <Box my={'md'} className={styles.madeForYou}>
         {MADE_FOR_YOU_MUSICS.map((music, index) => {
           return (
             <Paper
@@ -68,7 +68,7 @@ export const MusicView = () => {
             </Paper>
           )
         })}
-      </Box>
+      </Box> */}
     </Box>
   )
 }

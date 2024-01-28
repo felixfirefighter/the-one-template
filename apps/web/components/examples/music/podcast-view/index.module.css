@@ -1,0 +1,10 @@
+.podcastBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon {
+  color: var(--mantine-color-gray-6);
+}
