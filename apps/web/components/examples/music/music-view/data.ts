@@ -39,8 +39,8 @@ export const MADE_FOR_YOU_MUSICS = [
   },
   {
     image: '/music/music-6.jpg',
-    title: 'Song of Mine',
-    name: 'Ethan Winters',
+    title: 'Imagine',
+    name: 'All Time Low',
   },
   {
     image: '/music/music-3.jpg',

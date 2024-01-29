@@ -42,12 +42,12 @@ export const MusicView = () => {
       </AppText>
       <AppText c="gray.6">Your personal playlists.</AppText>
 
-      {/* <Box my={'md'} className={styles.madeForYou}>
+      <Box my={'md'} className={styles.madeForYou}>
         {MADE_FOR_YOU_MUSICS.map((music, index) => {
           return (
             <Paper
               shadow="none"
-              key={music.title}
+              key={'made_for_you_' + music.title}
               mr={index < MADE_FOR_YOU_MUSICS.length ? 'md' : 0}
             >
               <Box className={styles.madeForYouImageContainer} mb={'xs'}>
@@ -68,7 +68,7 @@ export const MusicView = () => {
             </Paper>
           )
         })}
-      </Box> */}
+      </Box>
     </Box>
   )
 }
