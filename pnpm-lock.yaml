@@ -53,6 +53,9 @@ importers:
       '@trpc/server':
         specifier: ^10.44.1
         version: 10.45.0
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
       date-fns:
         specifier: ^3.3.0
         version: 3.3.0
@@ -4284,7 +4287,7 @@ packages:
       react: ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^16.0.0 || ^17.0.0 || ^18.0.0
     dependencies:
-      clsx: 2.0.0
+      clsx: 2.1.0
       eventemitter3: 4.0.7
       lodash: 4.17.21
       prop-types: 15.8.1

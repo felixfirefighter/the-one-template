@@ -4,16 +4,14 @@ export interface HeaderProps {
   items: HeaderItem[]
 }
 
-export interface HeaderItem {
-  title: string
-  subText?: string
-  hasDivider?: boolean
-  disabled?: boolean
+export interface HeaderItem extends HeaderSubItem {
   items?: HeaderSubItem[]
 }
 
 export interface HeaderSubItem {
   title: string
-  subText?: string
+  subText?: string | React.ReactNode
+  prefix?: string | React.ReactNode
   disabled?: boolean
+  hasDivider?: boolean
 }

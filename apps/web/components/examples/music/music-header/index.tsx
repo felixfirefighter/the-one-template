@@ -2,29 +2,15 @@
 
 import { Box, Menu } from '@mantine/core'
 import { AppSize, AppText } from '@the-one/ui'
+import { useState } from 'react'
+import { MusicHeaderItem } from '../music-header-item'
 import { HEADERS } from './data'
 import styles from './index.module.css'
-import { HeaderItem } from './types'
 
 export const MusicHeader = () => {
-  const renderHeaderItem = (headerItem: HeaderItem) => {
-    if (headerItem.items === undefined || headerItem.items.length === 0) {
-      return <AppText size="sm">{headerItem.title}</AppText>
-    }
-
-    return (
-      <Menu trigger="hover" position="right-start">
-        <Menu.Target>
-          <AppText size="sm">{headerItem.title}</AppText>
-        </Menu.Target>
-        <Menu.Dropdown>
-          {headerItem.items.map((item) => {
-            return <Menu.Item key={item.title}>{item.title}</Menu.Item>
-          })}
-        </Menu.Dropdown>
-      </Menu>
-    )
-  }
+  const [activeSubHeaderItem, setActiveSubHeaderItem] = useState<string | null>(
+    null,
+  )
 
   return (
     <Box p={AppSize.md} px={'lg'} className={styles.box}>
@@ -47,19 +33,12 @@ export const MusicHeader = () => {
             <Menu.Dropdown>
               {item.items.map((subItem) => {
                 return (
-                  <div key={subItem.title}>
-                    <Menu.Item
-                      disabled={subItem.disabled}
-                      rightSection={
-                        <AppText size="sm" c="dimmed">
-                          {subItem.subText}
-                        </AppText>
-                      }
-                    >
-                      {renderHeaderItem(subItem)}
-                    </Menu.Item>
-                    {subItem.hasDivider && <Menu.Divider />}
-                  </div>
+                  <MusicHeaderItem
+                    key={subItem.title}
+                    item={subItem}
+                    activeItem={activeSubHeaderItem}
+                    setActiveItem={setActiveSubHeaderItem}
+                  />
                 )
               })}
             </Menu.Dropdown>

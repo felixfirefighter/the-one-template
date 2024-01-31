@@ -1,4 +1,6 @@
-import { HeaderProps } from "./types";
+import { IconCheck, IconMicrophone2, IconWorld } from '@tabler/icons-react'
+import { AppSize } from '@the-one/ui'
+import { HeaderProps } from './types'
 
 export const HEADERS: HeaderProps[] = [
   {
@@ -67,7 +69,33 @@ export const HEADERS: HeaderProps[] = [
       },
       {
         title: 'Library',
-        items: [],
+        items: [
+          {
+            title: 'Update Cloud Library',
+          },
+          {
+            title: 'Update Genius',
+            hasDivider: true,
+          },
+          {
+            title: 'Organize Library...',
+          },
+          {
+            title: 'Export Library...',
+            disabled: true,
+          },
+          {
+            title: 'Show Duplicate Items',
+            hasDivider: true,
+          },
+          {
+            title: 'Get Album Artwork',
+          },
+          {
+            title: 'Get Track Names',
+            disabled: true,
+          },
+        ],
       },
       {
         title: 'Import...',
@@ -99,45 +127,46 @@ export const HEADERS: HeaderProps[] = [
     title: 'Edit',
     items: [
       {
-        title: 'New',
-        items: [],
+        title: 'Undo',
+        subText: '⌘Z',
+        disabled: true,
       },
       {
-        title: 'Open Stream URL...',
-        subText: '⌘U',
-      },
-      {
-        title: 'Close Window',
-        subText: '⌘W',
-        hasDivider: true,
-      },
-      {
-        title: 'Library',
-        items: [],
-      },
-      {
-        title: 'Import...',
-        subText: '⌘O',
-      },
-      {
-        title: 'Burn Playlist to Disc...',
+        title: 'Redo',
+        subText: '⇧⌘Z',
         disabled: true,
         hasDivider: true,
       },
       {
-        title: 'Show in Finder',
-        subText: '⇧⌘R',
+        title: 'Cut',
+        subText: '⌘X',
       },
       {
-        title: 'Convert',
+        title: 'Copy',
+        subText: '⌘C',
+        disabled: true,
+      },
+      {
+        title: 'Paste',
+        subText: '⌘V',
+        disabled: true,
+      },
+      {
+        title: 'Select All',
+        subText: '⌘A',
+      },
+      {
+        title: 'Deselect All',
+        subText: '⇧⌘A',
         hasDivider: true,
       },
       {
-        title: 'Page Setup...',
+        title: 'Smart Dictation',
+        subText: <IconMicrophone2 stroke={1.5} size={AppSize['4xl']} />,
       },
       {
-        title: 'Print...',
-        disabled: true,
+        title: 'EMoji & Symbols',
+        subText: <IconWorld stroke={1.5} size={AppSize['4xl']} />,
       },
     ],
   },
@@ -145,44 +174,22 @@ export const HEADERS: HeaderProps[] = [
     title: 'View',
     items: [
       {
-        title: 'New',
-        items: [],
+        title: 'Show Playing Next',
       },
       {
-        title: 'Open Stream URL...',
-        subText: '⌘U',
+        title: 'Show Lyrics',
+        prefix: <IconCheck stroke={1.5} size={AppSize['4xl']} />,
       },
       {
-        title: 'Close Window',
-        subText: '⌘W',
-        hasDivider: true,
-      },
-      {
-        title: 'Library',
-        items: [],
-      },
-      {
-        title: 'Import...',
-        subText: '⌘O',
-      },
-      {
-        title: 'Burn Playlist to Disc...',
+        title: 'Show Status Bar',
         disabled: true,
         hasDivider: true,
       },
       {
-        title: 'Show in Finder',
-        subText: '⇧⌘R',
+        title: 'Hide Sidebar',
       },
       {
-        title: 'Convert',
-        hasDivider: true,
-      },
-      {
-        title: 'Page Setup...',
-      },
-      {
-        title: 'Print...',
+        title: 'Enter Full Screen',
         disabled: true,
       },
     ],
@@ -191,45 +198,14 @@ export const HEADERS: HeaderProps[] = [
     title: 'Account',
     items: [
       {
-        title: 'New',
-        items: [],
+        title: 'Manage Family...',
       },
       {
-        title: 'Open Stream URL...',
-        subText: '⌘U',
-      },
-      {
-        title: 'Close Window',
-        subText: '⌘W',
+        title: 'Add Account...',
         hasDivider: true,
       },
       {
-        title: 'Library',
-        items: [],
-      },
-      {
-        title: 'Import...',
-        subText: '⌘O',
-      },
-      {
-        title: 'Burn Playlist to Disc...',
-        disabled: true,
-        hasDivider: true,
-      },
-      {
-        title: 'Show in Finder',
-        subText: '⇧⌘R',
-      },
-      {
-        title: 'Convert',
-        hasDivider: true,
-      },
-      {
-        title: 'Page Setup...',
-      },
-      {
-        title: 'Print...',
-        disabled: true,
+        title: 'Sign Out',
       },
     ],
   },
