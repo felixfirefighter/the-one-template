@@ -5,7 +5,7 @@ import styles from './index.module.css'
 
 export const MusicView = () => {
   return (
-    <Box flex={1}>
+    <Box flex={1} className={styles.container}>
       <AppText fontWeight="600" size="2xl">
         Listen Now
       </AppText>
