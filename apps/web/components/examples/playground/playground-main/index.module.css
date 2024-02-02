@@ -1,0 +1,10 @@
+.options {
+  flex-basis: 200px;
+}
+
+.icon {
+  margin-top: 4px;
+  width: 1rem;
+  height: 1rem;
+  display: 'block';
+}
