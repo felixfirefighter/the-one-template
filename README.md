@@ -17,11 +17,11 @@
 
 #### Packages
 
-`@the-one/api`: API routers for apps
-`@the-one/database`: Schema and seed files powered by Prisma
-`@the-one/eslint-config`: Collection of internal eslint configurations
-`@the-one/typescript-config`: Collection of internal Typescript configurations
-`@the-one/ui`: Shared UI components
+`@the-one/api`: API routers for apps \
+`@the-one/database`: Schema and seed files powered by Prisma \
+`@the-one/eslint-config`: Collection of internal eslint configurations \
+`@the-one/typescript-config`: Collection of internal Typescript configurations \
+`@the-one/ui`: Shared UI components \
 
 ### Commit changes
 
@@ -37,15 +37,15 @@ git cz
 
 ### Extensions
 
-`Better Comments`: Improve your code commenting by annotating with alert, informational, TODOs, and more!
-`CSS Modules`: Visual Studio Code extension for CSS Modules
-`ESLint`: Integrates ESLint JavaScript into VS Code.
-`Prettier`: Code formatter using prettier
+`Better Comments`: Improve your code commenting by annotating with alert, informational, TODOs, and more! \
+`CSS Modules`: Visual Studio Code extension for CSS Modules \
+`ESLint`: Integrates ESLint JavaScript into VS Code. \
+`Prettier`: Code formatter using prettier \
 `Prisma`: Adds syntax highlighting, formatting, auto-completion, jump-to-definition and linting for .prisma files.
 
 ### Core Dependencies
 
-[Turborepo](https://turbo.build/): TypeScript monorepo 
-[Prisma](https://www.prisma.io/): TypeScript ORM for accessing DB
-[tRPC](https://trpc.io/): Typesafe API
+[Turborepo](https://turbo.build/): TypeScript monorepo  \
+[Prisma](https://www.prisma.io/): TypeScript ORM for accessing DB \
+[tRPC](https://trpc.io/): Typesafe API \
 [Mantine](https://mantine.dev/): Fully featured React component library
