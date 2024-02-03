@@ -33,6 +33,13 @@ export const appTheme: MantineThemeOverride = createTheme({
           borderColor: '#E9ECEF' // gray.2
         }
       }
+    },
+    Textarea: {
+      styles: {
+        input: {
+          borderRadius: AppSize.md,
+        }
+      }
     }
   },
 })

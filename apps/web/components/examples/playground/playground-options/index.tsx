@@ -13,9 +13,12 @@ import { useState } from 'react'
 import { MODELS, MODES } from './data'
 import styles from './index.module.css'
 
-interface Props {}
+interface Props {
+  mode: string
+  setMode: (mode: string) => void
+}
 
-export const PlaygroundOptions: React.FC<Props> = ({}) => {
+export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
   const [model, setModel] = useState('text-davinci-003')
   const [temperature, setTemperature] = useState(0.75)
   const [maxLen, setMaxLen] = useState(1000)
@@ -31,7 +34,13 @@ export const PlaygroundOptions: React.FC<Props> = ({}) => {
         <AppText fontWeight="600" size="sm" mb={'xs'}>
           Mode
         </AppText>
-        <SegmentedControl size="xs" fullWidth data={MODES} />
+        <SegmentedControl
+          size="xs"
+          fullWidth
+          data={MODES}
+          value={mode}
+          onChange={setMode}
+        />
       </Box>
 
       <Box mb={'lg'}>
