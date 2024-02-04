@@ -12,6 +12,15 @@ export const AppSize = {
   '7xl': 42,
 }
 
+export const MantineSize = {
+  Button: {
+    sm: 36
+  },
+  Icon: {
+    sm: 16
+  }
+}
+
 export const AppWidth = {
   Navbar: 267
 }
