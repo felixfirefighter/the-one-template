@@ -18,6 +18,13 @@ export const appTheme: MantineThemeOverride = createTheme({
         }
       }
     },
+    Modal: {
+      styles: {
+        content: {
+          padding: AppSize.md
+        }
+      }
+    },
     NavLink: {
       styles: {
         root: {

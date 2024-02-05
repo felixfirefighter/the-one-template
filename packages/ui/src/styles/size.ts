@@ -12,13 +12,12 @@ export const AppSize = {
   '7xl': 42,
 }
 
-export const MantineSize = {
-  Button: {
-    sm: 36
-  },
-  Icon: {
-    sm: 16
-  }
+export const AppButtonSize = {
+  sm: 36
+}
+
+export const AppIconSize = {
+  sm: 16
 }
 
 export const AppWidth = {

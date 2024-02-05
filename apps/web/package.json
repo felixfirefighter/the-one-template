@@ -13,6 +13,7 @@
     "@mantine/core": "^7.3.2",
     "@mantine/dates": "^7.4.0",
     "@mantine/hooks": "^7.3.2",
+    "@mantine/notifications": "^7.5.1",
     "@tabler/icons-react": "^2.45.0",
     "@the-one/ui": "workspace:*",
     "@trpc/server": "^10.44.1",

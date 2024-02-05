@@ -7,13 +7,16 @@ import {
   CopyButton,
   Divider,
   Flex,
+  Menu,
   Popover,
   Select,
   TextInput,
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
-import { IconCopy, IconDotsVertical } from '@tabler/icons-react'
-import { AppIconStroke, AppText, MantineSize } from '@the-one/ui'
+import { IconCopy, IconDots } from '@tabler/icons-react'
+import { AppButtonSize, AppIconSize, AppIconStroke, AppText } from '@the-one/ui'
+import { PlaygroundContentFilterModal } from '../playground-content-filter-modal'
+import { PlaygroundDeleteModal } from '../playground-delete-modal'
 import { PlaygroundSaveModal } from '../playground-save-modal'
 import { PlaygroundViewCodeModal } from '../playground-view-code-modal'
 import { PRESETS } from './data'
@@ -25,6 +28,16 @@ export const PlaygroundHeader = () => {
   const [
     viewCodeModalOpened,
     { open: openViewCodeModal, close: closeViewCodeModal },
+  ] = useDisclosure(false)
+
+  const [
+    contentFilterModalOpened,
+    { open: openContentFilterModal, close: closeContentFilterModal },
+  ] = useDisclosure(false)
+
+  const [
+    deleteModalOpened,
+    { open: openDeleteModal, close: closeDeleteModal },
   ] = useDisclosure(false)
 
   return (
@@ -83,10 +96,10 @@ export const PlaygroundHeader = () => {
 
                 <CopyButton value="https://platform.openai.com/playground/p/8freNmVb8NGcdUOLae">
                   {({ copy }) => (
-                    <ActionIcon size={MantineSize.Button.sm} onClick={copy}>
+                    <ActionIcon size={AppButtonSize.sm} onClick={copy}>
                       <IconCopy
                         stroke={AppIconStroke.md}
-                        size={MantineSize.Icon.sm}
+                        size={AppIconSize.sm}
                       />
                     </ActionIcon>
                   )}
@@ -94,9 +107,25 @@ export const PlaygroundHeader = () => {
               </Flex>
             </Popover.Dropdown>
           </Popover>
-          <ActionIcon variant="light" size={'lg'}>
-            <IconDotsVertical />
-          </ActionIcon>
+
+          <Menu position="bottom-end">
+            <Menu.Target>
+              <ActionIcon variant="light" size={AppButtonSize.sm}>
+                <IconDots />
+              </ActionIcon>
+            </Menu.Target>
+            <Menu.Dropdown>
+              <Menu.Item onClick={openContentFilterModal}>
+                <AppText size="sm">Content filter preferences</AppText>
+              </Menu.Item>
+              <Menu.Divider />
+              <Menu.Item onClick={openDeleteModal}>
+                <AppText size="sm" c="red">
+                  Delete preset
+                </AppText>
+              </Menu.Item>
+            </Menu.Dropdown>
+          </Menu>
         </Flex>
       </Flex>
       <Divider />
@@ -105,6 +134,14 @@ export const PlaygroundHeader = () => {
       <PlaygroundViewCodeModal
         close={closeViewCodeModal}
         opened={viewCodeModalOpened}
+      />
+      <PlaygroundContentFilterModal
+        close={closeContentFilterModal}
+        opened={contentFilterModalOpened}
+      />
+      <PlaygroundDeleteModal
+        close={closeDeleteModal}
+        opened={deleteModalOpened}
       />
     </Box>
   )

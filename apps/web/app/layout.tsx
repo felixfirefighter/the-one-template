@@ -2,6 +2,8 @@ import '@mantine/charts/styles.css'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css'
 import '@mantine/dates/styles.css'
+import { Notifications } from '@mantine/notifications'
+import '@mantine/notifications/styles.css'
 import { ClientProvider } from '@the-one/api'
 import { appTheme } from '@the-one/ui'
 import { Inter } from 'next/font/google'
@@ -21,7 +23,10 @@ export default function RootLayout({
           <ColorSchemeScript />
         </head>
         <body className={inter.className}>
-          <MantineProvider theme={appTheme}>{children}</MantineProvider>
+          <MantineProvider theme={appTheme}>
+            <Notifications position="bottom-right" />
+            {children}
+          </MantineProvider>
         </body>
       </html>
     </ClientProvider>
