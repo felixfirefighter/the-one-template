@@ -28,7 +28,7 @@ export const FONT_SIZE_MAPPER: Record<FontSize, string> = {
 }
 
 export const LINE_HEIGHT_MAPPER: Record<FontSize, number> = {
-  xs: 2,
+  xs: 1.5,
   sm: 1.5,
   md: 1.5,
   lg: 1.5,
