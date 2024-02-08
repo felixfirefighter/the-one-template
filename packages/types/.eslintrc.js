@@ -7,4 +7,7 @@ module.exports = {
   parserOptions: {
     project: "./tsconfig.lint.json",
   },
+  rules: [
+    '@typescript-eslint/no-unused-vars'
+  ]
 };

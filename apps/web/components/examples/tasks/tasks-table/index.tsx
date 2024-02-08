@@ -2,8 +2,17 @@
 
 import { Box } from '@mantine/core'
 import { DataTable } from 'mantine-datatable'
+import { generateRandomTask } from './utils'
+import { useEffect, useState } from 'react'
+import { Task } from './types'
 
 export const TasksTable = () => {
+  const [records, setRecords] = useState<Task[]>([])
+
+  useEffect(() => {
+    setRecords(Array.from({ length: 100 }, generateRandomTask))
+  }, [])
+
   return (
     <Box>
       <DataTable
@@ -12,31 +21,17 @@ export const TasksTable = () => {
         withColumnBorders
         striped
         highlightOnHover
-        // provide data
-        records={[
-          { id: 1, name: 'Joe Biden', bornIn: 1942, party: 'Democratic' },
-          // more records...
-        ]}
-        // define columns
+        records={records}
         columns={[
           {
             accessor: 'id',
-            // this column has a custom title
-            title: '#',
-            // right-align column
-            textAlign: 'right',
+            title: 'Task',
           },
-          { accessor: 'name' },
+          { accessor: 'title' },
           {
-            accessor: 'party',
-            // this column has custom cell data rendering
-            render: ({ party }) => (
-              <Box fw={700} c={party === 'Democratic' ? 'blue' : 'red'}>
-                {party.slice(0, 3).toUpperCase()}
-              </Box>
-            ),
+            accessor: 'status',
           },
-          { accessor: 'bornIn' },
+          { accessor: 'priority' },
         ]}
       />
     </Box>
