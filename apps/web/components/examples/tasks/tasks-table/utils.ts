@@ -1,4 +1,4 @@
-import { Task, TaskPriority, TaskStatus, TaskType } from "./types";
+import { Task, TaskPriority, TaskStatus, TaskType } from "../../../../types/tasks";
 
 // Array of sample task titles
 const randomTitles = [

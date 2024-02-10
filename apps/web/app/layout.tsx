@@ -22,10 +22,10 @@ export default function RootLayout({
     <ClientProvider>
       <html lang="en">
         <head>
-          <ColorSchemeScript />
+          <ColorSchemeScript defaultColorScheme="auto"/>
         </head>
         <body className={inter.className}>
-          <MantineProvider theme={appTheme}>
+          <MantineProvider defaultColorScheme="auto" theme={appTheme}>
             <Notifications position="bottom-right" />
             {children}
           </MantineProvider>

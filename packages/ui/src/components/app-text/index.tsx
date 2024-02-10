@@ -7,6 +7,8 @@ import {
 } from './types'
 import styles from './index.module.css'
 
+type TextTruncate = 'end' | 'start' | boolean;
+
 interface Props {
   size?: FontSize
   c?: MantineColor
@@ -18,6 +20,7 @@ interface Props {
   lh?: StyleProp<MantineLineHeight | number | (string & {})>
   lineClamp?: number
   style?: MantineStyleProp
+  truncate?: TextTruncate
 }
 
 export const AppText: React.FC<Props> = ({
@@ -30,6 +33,7 @@ export const AppText: React.FC<Props> = ({
   mb,
   lh,
   lineClamp,
+  truncate,
   style
 }) => {
   return (
@@ -42,6 +46,7 @@ export const AppText: React.FC<Props> = ({
       size={FONT_SIZE_MAPPER[size]}
       ta={ta}
       c={c}
+      truncate={truncate}
       style={{
         fontWeight,
         ...style
