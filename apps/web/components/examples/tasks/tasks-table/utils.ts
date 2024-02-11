@@ -97,7 +97,6 @@ const randomTitles = [
   "Update data validation rules for user inputs"
 ];
 
-
 // Function to generate a random string for task IDs
 function generateRandomId(): string {
   return `TASK-${Math.floor(1000 + Math.random() * 9000)}`;
