@@ -1,9 +1,20 @@
 'use client'
 
 import { Button, Flex, Menu, TextInput } from '@mantine/core'
-import { IconAdjustmentsHorizontal } from '@tabler/icons-react'
+import { IconAdjustmentsHorizontal, IconCheck } from '@tabler/icons-react'
+import { AppSize } from '@the-one/ui'
 
-export const TasksActionBar = () => {
+interface Props {
+  activeTaskColumns: {
+    [key: string]: boolean
+  }
+  setActiveTaskColumns: (activeTaskColumns: { [key: string]: boolean }) => void
+}
+
+export const TasksActionBar: React.FC<Props> = ({
+  activeTaskColumns,
+  setActiveTaskColumns,
+}) => {
   return (
     <Flex mb="md" justify={'space-between'}>
       <Flex gap={'xs'}>
@@ -16,7 +27,30 @@ export const TasksActionBar = () => {
           </Button>
         </Menu.Target>
 
-        <Menu.Dropdown></Menu.Dropdown>
+        <Menu.Dropdown>
+          <Menu.Label>Toggle Columns</Menu.Label>
+          <Menu.Divider />
+          {Object.entries(activeTaskColumns).map(([key, value]) => {
+            return (
+              <Menu.Item
+                key={key}
+                leftSection={
+                  <IconCheck
+                    size={AppSize['3xl']}
+                    style={{
+                      color: value ? undefined : 'transparent',
+                    }}
+                  />
+                }
+                onClick={() =>
+                  setActiveTaskColumns({ ...activeTaskColumns, [key]: !value })
+                }
+              >
+                {key}
+              </Menu.Item>
+            )
+          })}
+        </Menu.Dropdown>
       </Menu>
     </Flex>
   )

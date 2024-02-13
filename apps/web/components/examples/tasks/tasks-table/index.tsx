@@ -16,7 +16,13 @@ import { TASKS } from './data'
 
 const PAGE_SIZE = 10
 
-export const TasksTable = () => {
+interface Props {
+  activeTaskColumns: {
+    [key: string]: boolean
+  }
+}
+
+export const TasksTable: React.FC<Props> = ({ activeTaskColumns }) => {
   const [records, setRecords] = useState<Task[]>(TASKS.slice(0, PAGE_SIZE))
   const [selectedRecords, setSelectedRecords] = useState<Task[]>([])
   const [page, setPage] = useState(1)
@@ -50,10 +56,11 @@ export const TasksTable = () => {
           },
           {
             accessor: 'title',
+            hidden: !activeTaskColumns.Title,
             render: (task: Task) => {
               return (
                 <Flex gap={'xs'} align={'baseline'}>
-                  <Badge radius={'sm'}>{task.type}</Badge>
+                  <Badge radius={'sm'} variant='default'>{task.type}</Badge>
                   <AppText fontWeight="500" truncate="end" size="sm">
                     {task.title}
                   </AppText>
@@ -63,11 +70,13 @@ export const TasksTable = () => {
           },
           {
             accessor: 'status',
+            hidden: !activeTaskColumns.Status,
             width: 150,
             render: (task: Task) => <TaskStatusItem task={task} />,
           },
           {
             accessor: 'priority',
+            hidden: !activeTaskColumns.Priority,
             width: 150,
             render: (task: Task) => <TaskPriorityItem task={task} />,
           },

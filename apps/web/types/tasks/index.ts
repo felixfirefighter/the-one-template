@@ -20,6 +20,12 @@ export enum TaskPriority {
   High = 'High'
 }
 
+export const TaskColumn = {
+  Priority: 'Priority',
+  Title: 'Title',
+  Status: 'Status',
+}
+
 export interface Task {
   id: string;
   title: string;
