@@ -296,7 +296,7 @@ export const TASKS: Task[] = [
     priority: TaskPriority.Low,
   },
   {
-    id: 'TASK-6193',
+    id: 'TASK-6192',
     title: 'Add support for user tagging in content',
     type: TaskType.Documentation,
     status: TaskStatus.InProgress,

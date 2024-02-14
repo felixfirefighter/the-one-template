@@ -9,16 +9,21 @@ interface Props {
     [key: string]: boolean
   }
   setActiveTaskColumns: (activeTaskColumns: { [key: string]: boolean }) => void
+  setFilteredText: (text: string) => void
 }
 
 export const TasksActionBar: React.FC<Props> = ({
   activeTaskColumns,
   setActiveTaskColumns,
+  setFilteredText,
 }) => {
   return (
     <Flex mb="md" justify={'space-between'}>
       <Flex gap={'xs'}>
-        <TextInput placeholder="Filter tasks..." />
+        <TextInput
+          placeholder="Filter by task name..."
+          onChange={(e) => setFilteredText(e.target.value)}
+        />
       </Flex>
       <Menu>
         <Menu.Target>

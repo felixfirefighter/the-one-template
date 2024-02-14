@@ -19,19 +19,20 @@ const PAGE_SIZE = 10
 interface Props {
   activeTaskColumns: {
     [key: string]: boolean
-  }
+  },
+  records: Task[]
 }
 
-export const TasksTable: React.FC<Props> = ({ activeTaskColumns }) => {
-  const [records, setRecords] = useState<Task[]>(TASKS.slice(0, PAGE_SIZE))
+export const TasksTable: React.FC<Props> = ({ activeTaskColumns, records }) => {
+  const [pagedRecords, setPagedRecords] = useState(records.slice(0, PAGE_SIZE))
   const [selectedRecords, setSelectedRecords] = useState<Task[]>([])
   const [page, setPage] = useState(1)
 
   useEffect(() => {
     const from = (page - 1) * PAGE_SIZE
     const to = from + PAGE_SIZE
-    setRecords(TASKS.slice(from, to))
-  }, [page])
+    setPagedRecords(records.slice(from, to))
+  }, [records, page])
 
   return (
     <Box>
@@ -41,13 +42,13 @@ export const TasksTable: React.FC<Props> = ({ activeTaskColumns }) => {
         borderRadius="sm"
         striped
         highlightOnHover
-        records={records}
+        records={pagedRecords}
         selectedRecords={selectedRecords}
         onSelectedRecordsChange={setSelectedRecords}
         recordsPerPage={10}
         onPageChange={setPage}
         page={page}
-        totalRecords={TASKS.length}
+        totalRecords={records.length}
         columns={[
           {
             accessor: 'id',
