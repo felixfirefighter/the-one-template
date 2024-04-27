@@ -22,7 +22,7 @@ export default function RootLayout({
     <ClientProvider>
       <html lang="en">
         <head>
-          <ColorSchemeScript defaultColorScheme="auto"/>
+          <ColorSchemeScript defaultColorScheme="auto" />
         </head>
         <body className={inter.className}>
           <MantineProvider defaultColorScheme="auto" theme={appTheme}>

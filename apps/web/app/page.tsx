@@ -1,9 +1,10 @@
-import styles from './page.module.css'
+import ExamplePage from './examples/authentication/page'
+import ExampleLayout from './examples/layout'
 
-export default function Page(): JSX.Element {
+export default function Page() {
   return (
-    <main className={styles.main}>
-      <h1>The One template for your web application.</h1>
-    </main>
+    <ExampleLayout>
+      <ExamplePage />
+    </ExampleLayout>
   )
 }
