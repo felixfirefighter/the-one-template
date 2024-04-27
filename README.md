@@ -2,7 +2,7 @@
 
 # Demo
 
-URL: the-one-template-web.vercel.app
+Check out the demo [here](https://the-one-template-web.vercel.app)
 
 ## Development
 
