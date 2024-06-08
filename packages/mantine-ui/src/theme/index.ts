@@ -1,5 +1,5 @@
 import { MantineThemeOverride, createTheme } from '@mantine/core'
-import { AppSize } from '..'
+import { MAppSize } from '..'
 
 export const appTheme: MantineThemeOverride = createTheme({
   primaryColor: 'dark',
@@ -7,7 +7,7 @@ export const appTheme: MantineThemeOverride = createTheme({
     Button: {
       styles: {
         root: {
-          borderRadius: AppSize.md,
+          borderRadius: MAppSize.md,
         }
       }
     },
@@ -21,14 +21,14 @@ export const appTheme: MantineThemeOverride = createTheme({
     Modal: {
       styles: {
         content: {
-          padding: AppSize.md
+          padding: MAppSize.md
         }
       }
     },
     NavLink: {
       styles: {
         root: {
-          borderRadius: AppSize['6xl'],
+          borderRadius: MAppSize['6xl'],
           fontWeight: 500,
         },
       },
@@ -36,7 +36,7 @@ export const appTheme: MantineThemeOverride = createTheme({
     Paper: {
       styles: {
         root: {
-          borderRadius: AppSize.lg,
+          borderRadius: MAppSize.lg,
           borderColor: '#E9ECEF' // gray.2
         }
       }
@@ -44,7 +44,7 @@ export const appTheme: MantineThemeOverride = createTheme({
     Textarea: {
       styles: {
         input: {
-          borderRadius: AppSize.md,
+          borderRadius: MAppSize.md,
         }
       }
     }

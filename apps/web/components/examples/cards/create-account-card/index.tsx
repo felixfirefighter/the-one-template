@@ -1,18 +1,18 @@
 import { Button, Divider, Flex, Paper, TextInput } from '@mantine/core'
 import { IconBrandGithub, IconBrandGoogleFilled } from '@tabler/icons-react'
-import { AppSize, AppText } from '@the-one/ui'
+import { MAppSize, MAppText } from '@the-one/mantine-ui'
 
 export const CreateAccountCard = () => {
   return (
     <Paper shadow="md" p="lg" withBorder>
-      <AppText size="xl" fontWeight="700">
+      <MAppText size="xl" fontWeight="700">
         Create an account
-      </AppText>
-      <AppText c="gray.6" size="sm" mb='xs'>
+      </MAppText>
+      <MAppText c="gray.6" size="sm" mb='xs'>
         Enter your email below to create an account
-      </AppText>
+      </MAppText>
 
-      <Flex py={AppSize['3xl']} gap={AppSize['2xl']}>
+      <Flex py={MAppSize['3xl']} gap={MAppSize['2xl']}>
         <Button
           fullWidth
           leftSection={<IconBrandGithub />}
@@ -30,10 +30,10 @@ export const CreateAccountCard = () => {
           Google
         </Button>
       </Flex>
-      <Divider label={<AppText size="xs">OR CONTINUE WITH</AppText>}></Divider>
-      <TextInput py={AppSize.md} label="Email" placeholder="theone@email.com"></TextInput>
-      <TextInput py={AppSize.md} type="password" label="Password"></TextInput>
-      <Button fullWidth mt={AppSize['3xl']}>Create account</Button>
+      <Divider label={<MAppText size="xs">OR CONTINUE WITH</MAppText>}></Divider>
+      <TextInput py={MAppSize.md} label="Email" placeholder="theone@email.com"></TextInput>
+      <TextInput py={MAppSize.md} type="password" label="Password"></TextInput>
+      <Button fullWidth mt={MAppSize['3xl']}>Create account</Button>
     </Paper>
   )
 }

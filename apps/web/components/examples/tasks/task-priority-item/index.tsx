@@ -1,6 +1,6 @@
 import { Flex } from '@mantine/core'
 import { IconArrowDown, IconArrowRight, IconArrowUp, IconCircle, IconCircleCheck, IconProgress } from '@tabler/icons-react'
-import { AppIconSize, AppIconStroke, AppText } from '@the-one/ui'
+import { MAppIconSize, MAppIconStroke, MAppText } from '@the-one/mantine-ui'
 import { assertUnreachable } from '../../../../../../packages/utils/src'
 import { Task, TaskPriority } from '../../../../types/tasks'
 
@@ -12,12 +12,12 @@ export const TaskPriorityItem: React.FC<Props> = ({ task }) => {
   const TaskIcon = () => {
     switch (task.priority) {
       case TaskPriority.High:
-        return <IconArrowUp stroke={AppIconStroke.sm} size={AppIconSize.sm} />
+        return <IconArrowUp stroke={MAppIconStroke.sm} size={MAppIconSize.sm} />
       case TaskPriority.Medium:
-        return <IconArrowRight stroke={AppIconStroke.sm} size={AppIconSize.sm} />
+        return <IconArrowRight stroke={MAppIconStroke.sm} size={MAppIconSize.sm} />
       case TaskPriority.Low:
         return (
-          <IconArrowDown stroke={AppIconStroke.sm} size={AppIconSize.sm} />
+          <IconArrowDown stroke={MAppIconStroke.sm} size={MAppIconSize.sm} />
         )
       default:
         assertUnreachable(task.priority)
@@ -27,9 +27,9 @@ export const TaskPriorityItem: React.FC<Props> = ({ task }) => {
   return (
     <Flex gap="xs" align={'center'}>
       <TaskIcon />
-      <AppText lh={1} size="sm">
+      <MAppText lh={1} size="sm">
         {task.priority}
-      </AppText>
+      </MAppText>
     </Flex>
   )
 }

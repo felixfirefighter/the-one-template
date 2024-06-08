@@ -1,5 +1,5 @@
 import { Grid, useMantineColorScheme } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { ThemeCard } from '../theme-card'
 
 export const ThemeCards = () => {
@@ -7,12 +7,12 @@ export const ThemeCards = () => {
 
   return (
     <>
-      <AppText size="sm" fontWeight="500">
+      <MAppText size="sm" fontWeight="500">
         Theme
-      </AppText>
-      <AppText size="xs" c="gray.6">
+      </MAppText>
+      <MAppText size="xs" c="gray.6">
         Select the theme for the dashboard
-      </AppText>
+      </MAppText>
       <Grid>
         <Grid.Col span={4}>
           <ThemeCard

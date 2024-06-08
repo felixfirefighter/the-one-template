@@ -15,7 +15,7 @@
     "@mantine/hooks": "^7.3.2",
     "@mantine/notifications": "^7.5.1",
     "@tabler/icons-react": "^2.45.0",
-    "@the-one/ui": "workspace:*",
+    "@the-one/mantine-ui": "workspace:*",
     "@trpc/server": "^10.44.1",
     "clsx": "^2.1.0",
     "date-fns": "^3.3.0",

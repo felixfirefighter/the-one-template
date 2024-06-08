@@ -1,15 +1,15 @@
 import { Box, Image, Paper, Space } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { MADE_FOR_YOU_MUSICS, MAIN_MUSICS } from './data'
 import styles from './index.module.css'
 
 export const MusicView = () => {
   return (
     <Box flex={1} className={styles.container}>
-      <AppText fontWeight="600" size="2xl">
+      <MAppText fontWeight="600" size="2xl">
         Listen Now
-      </AppText>
-      <AppText c="gray.6">Top picks for you.</AppText>
+      </MAppText>
+      <MAppText c="gray.6">Top picks for you.</MAppText>
 
       <Box my={'md'} className={styles.topPick}>
         {MAIN_MUSICS.map((music, index) => {
@@ -28,8 +28,8 @@ export const MusicView = () => {
                   className={styles.image}
                 ></Image>
               </Box>
-              <AppText fontWeight="600">{music.title}</AppText>
-              <AppText c="gray.6">{music.name}</AppText>
+              <MAppText fontWeight="600">{music.title}</MAppText>
+              <MAppText c="gray.6">{music.name}</MAppText>
             </Paper>
           )
         })}
@@ -37,10 +37,10 @@ export const MusicView = () => {
 
       <Space py="lg"></Space>
 
-      <AppText fontWeight="600" size="2xl">
+      <MAppText fontWeight="600" size="2xl">
         Made for You
-      </AppText>
-      <AppText c="gray.6">Your personal playlists.</AppText>
+      </MAppText>
+      <MAppText c="gray.6">Your personal playlists.</MAppText>
 
       <Box my={'md'} className={styles.madeForYou}>
         {MADE_FOR_YOU_MUSICS.map((music, index) => {
@@ -59,12 +59,12 @@ export const MusicView = () => {
                   className={styles.image}
                 ></Image>
               </Box>
-              <AppText fontWeight="600" size="sm">
+              <MAppText fontWeight="600" size="sm">
                 {music.title}
-              </AppText>
-              <AppText c="gray.6" size="sm">
+              </MAppText>
+              <MAppText c="gray.6" size="sm">
                 {music.name}
-              </AppText>
+              </MAppText>
             </Paper>
           )
         })}

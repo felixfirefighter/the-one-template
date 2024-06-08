@@ -1,4 +1,4 @@
-export const AppSize = {
+export const MAppSize = {
   xs: 2,
   sm: 4,
   md: 6,
@@ -12,19 +12,19 @@ export const AppSize = {
   '7xl': 42,
 }
 
-export const AppButtonSize = {
+export const MAppButtonSize = {
   sm: 36
 }
 
-export const AppIconSize = {
+export const MAppIconSize = {
   sm: 16
 }
 
-export const AppWidth = {
+export const MAppWidth = {
   Navbar: 267
 }
 
-export const AppIconStroke = {
+export const MAppIconStroke = {
   sm: 1,
   md: 1.5,
 }

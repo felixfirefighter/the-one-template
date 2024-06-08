@@ -1,6 +1,6 @@
 import { Box, Button, Container, Divider, Flex, TextInput } from '@mantine/core'
 import { IconBrandGoogleFilled, IconTriangle } from '@tabler/icons-react'
-import { AppSize, AppText } from '@the-one/ui'
+import { MAppSize, MAppText } from '@the-one/mantine-ui'
 import Link from 'next/link'
 
 export default function Page(): JSX.Element {
@@ -15,8 +15,8 @@ export default function Page(): JSX.Element {
           c="gray.2"
           p="xl"
           style={{
-            borderTopLeftRadius: AppSize['3xl'],
-            borderBottomLeftRadius: AppSize['3xl'],
+            borderTopLeftRadius: MAppSize['3xl'],
+            borderBottomLeftRadius: MAppSize['3xl'],
           }}
           justify={'space-between'}
         >
@@ -24,25 +24,25 @@ export default function Page(): JSX.Element {
             <Box mr={'xs'}>
               <IconTriangle />
             </Box>
-            <AppText>The One Inc</AppText>
+            <MAppText>The One Inc</MAppText>
           </Flex>
           <Box>
-            <AppText>
+            <MAppText>
               “This library has saved me countless hours of work and helped me
               deliver stunning designs to my clients faster than ever before.”
-            </AppText>
-            <AppText>- Alex Low</AppText>
+            </MAppText>
+            <MAppText>- Alex Low</MAppText>
           </Box>
         </Flex>
         <Flex justify={'center'} flex={1} h="100%">
           <Flex ta={'center'} h="100%" justify={'center'} align={'center'}>
             <Box w={'75%'}>
-              <AppText size="2xl" fontWeight="700">
+              <MAppText size="2xl" fontWeight="700">
                 Create an account
-              </AppText>
-              <AppText c="gray.6" size="sm" mb="md">
+              </MAppText>
+              <MAppText c="gray.6" size="sm" mb="md">
                 Enter your email below to create an account
-              </AppText>
+              </MAppText>
               <TextInput placeholder="name@theone.com" mb={''}></TextInput>
               <Button my={'sm'} fullWidth>
                 Sign in with Email
@@ -50,7 +50,7 @@ export default function Page(): JSX.Element {
 
               <Divider
                 my={'lg'}
-                label={<AppText size="xs">OR CONTINUE WITH</AppText>}
+                label={<MAppText size="xs">OR CONTINUE WITH</MAppText>}
               ></Divider>
 
               <Button
@@ -62,11 +62,11 @@ export default function Page(): JSX.Element {
               </Button>
 
               <Flex justify={'center'} my={'lg'}>
-                <AppText size="sm" c="gray.6" w={'75%'}>
+                <MAppText size="sm" c="gray.6" w={'75%'}>
                   By clicking continue, your agree to our{' '}
                   <Link href="">Terms of Service</Link> and{' '}
                   <Link href="">Privacy Policy</Link>
-                </AppText>
+                </MAppText>
               </Flex>
             </Box>
           </Flex>

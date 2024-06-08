@@ -1,5 +1,5 @@
 import { IconAlbum, IconLayoutGrid, IconMicrophone, IconMusicBolt, IconPlayerPlay, IconPlaylist, IconRadio, IconUser } from "@tabler/icons-react";
-import { AppSize } from "@the-one/ui";
+import { MAppSize } from "@the-one/mantine-ui";
 
 
 export const NAV_LINKS = [
@@ -8,16 +8,16 @@ export const NAV_LINKS = [
     items: [
       {
         title: 'Listen now',
-        icon: <IconPlayerPlay size={AppSize["4xl"]}/>,
+        icon: <IconPlayerPlay size={MAppSize["4xl"]}/>,
         active: true
       },
       {
         title: 'Browse',
-        icon: <IconLayoutGrid size={AppSize["4xl"]}/>
+        icon: <IconLayoutGrid size={MAppSize["4xl"]}/>
       },
       {
         title: 'Radio',
-        icon: <IconRadio size={AppSize["4xl"]}/>
+        icon: <IconRadio size={MAppSize["4xl"]}/>
       }
     ]
   },
@@ -26,23 +26,23 @@ export const NAV_LINKS = [
     items: [
       {
         title: 'Playlists',
-        icon: <IconPlaylist size={AppSize["4xl"]}/>
+        icon: <IconPlaylist size={MAppSize["4xl"]}/>
       },
       {
         title: 'Songs',
-        icon: <IconMusicBolt size={AppSize["4xl"]}/>
+        icon: <IconMusicBolt size={MAppSize["4xl"]}/>
       },
       {
         title: 'Made for you',
-        icon: <IconUser size={AppSize["4xl"]}/>
+        icon: <IconUser size={MAppSize["4xl"]}/>
       },
       {
         title: 'Artists',
-        icon: <IconMicrophone size={AppSize["4xl"]}/>
+        icon: <IconMicrophone size={MAppSize["4xl"]}/>
       },
       {
         title: 'Albums',
-        icon: <IconAlbum size={AppSize["4xl"]}/>
+        icon: <IconAlbum size={MAppSize["4xl"]}/>
       }
     ]
   },
@@ -51,31 +51,31 @@ export const NAV_LINKS = [
     items: [
       {
         title: 'Recently Added',
-        icon: <IconPlaylist size={AppSize["4xl"]}/>,
+        icon: <IconPlaylist size={MAppSize["4xl"]}/>,
       },
       {
         title: 'Recently Played',
-        icon: <IconPlaylist size={AppSize["4xl"]}/>,
+        icon: <IconPlaylist size={MAppSize["4xl"]}/>,
       },
       {
         title: 'Top Songs',
-        icon: <IconPlaylist size={AppSize["4xl"]}/>,
+        icon: <IconPlaylist size={MAppSize["4xl"]}/>,
       },
       {
         title: 'Top Albums',
-        icon: <IconPlaylist size={AppSize["4xl"]}/>,
+        icon: <IconPlaylist size={MAppSize["4xl"]}/>,
       },
       {
         title: 'Top Artists',
-        icon: <IconPlaylist size={AppSize["4xl"]}/>,
+        icon: <IconPlaylist size={MAppSize["4xl"]}/>,
       },
       {
         title: 'Logic Discography',
-        icon: <IconPlaylist size={AppSize["4xl"]}/>,
+        icon: <IconPlaylist size={MAppSize["4xl"]}/>,
       },
       {
         title: 'Bedtime Beats',
-        icon: <IconPlaylist size={AppSize["4xl"]}/>,
+        icon: <IconPlaylist size={MAppSize["4xl"]}/>,
       },
     ]
   }

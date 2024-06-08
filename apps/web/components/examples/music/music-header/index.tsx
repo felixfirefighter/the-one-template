@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, Menu } from '@mantine/core'
-import { AppSize, AppText } from '@the-one/ui'
+import { MAppSize, MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { MusicHeaderItem } from '../music-header-item'
 import { HEADERS } from './data'
@@ -13,20 +13,20 @@ export const MusicHeader = () => {
   )
 
   return (
-    <Box p={AppSize.md} px={'lg'} className={styles.box}>
+    <Box p={MAppSize.md} px={'lg'} className={styles.box}>
       {HEADERS.map((item) => {
         return (
           <Menu key={item.title} position="bottom-start">
             <Menu.Target>
               <Box
-                px={AppSize.lg}
-                py={AppSize.sm}
+                px={MAppSize.lg}
+                py={MAppSize.sm}
                 display={'inline-block'}
                 className={styles.headerItem}
               >
-                <AppText size="sm" fontWeight={item.isBold ? '700' : '400'}>
+                <MAppText size="sm" fontWeight={item.isBold ? '700' : '400'}>
                   {item.title}
-                </AppText>
+                </MAppText>
               </Box>
             </Menu.Target>
 

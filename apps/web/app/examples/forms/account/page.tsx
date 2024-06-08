@@ -9,7 +9,7 @@ import {
   TextInput,
 } from '@mantine/core'
 import { DatePickerInput } from '@mantine/dates'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { LANGUAGES } from './data'
 
@@ -18,12 +18,12 @@ export default function Page(): JSX.Element {
 
   return (
     <Container size={'sm'} m={0}>
-      <AppText size="lg" fontWeight="600">
+      <MAppText size="lg" fontWeight="600">
         Account
-      </AppText>
-      <AppText c="gray.6" size="sm">
+      </MAppText>
+      <MAppText c="gray.6" size="sm">
         Update your account settings, set your preferred language and timezone.
-      </AppText>
+      </MAppText>
 
       <Divider my={'lg'}></Divider>
 

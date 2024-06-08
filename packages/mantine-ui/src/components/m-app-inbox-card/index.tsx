@@ -1,7 +1,7 @@
 import { Flex, Paper } from '@mantine/core'
 import clsx from 'clsx'
 import React from 'react'
-import { AppText } from '../app-text'
+import { MAppText } from '../m-app-text'
 import styles from './index.module.css'
 interface Props {
   header: string
@@ -14,7 +14,7 @@ interface Props {
   onClick?: () => void
 }
 
-export const AppInboxCard: React.FC<Props> = ({
+export const MAppInboxCard: React.FC<Props> = ({
   header,
   title,
   description,
@@ -34,17 +34,17 @@ export const AppInboxCard: React.FC<Props> = ({
       onClick={onClick}
     >
       <Flex justify={'space-between'}>
-        <AppText fontWeight="700" size="sm">
+        <MAppText fontWeight="700" size="sm">
           {header}
-        </AppText>
+        </MAppText>
         {rightSection}
       </Flex>
-      <AppText size="sm" mb={'xs'}>
+      <MAppText size="sm" mb={'xs'}>
         {title}
-      </AppText>
-      <AppText lineClamp={2} fontWeight="500" c="gray.6" size="sm" mb={'xs'}>
+      </MAppText>
+      <MAppText lineClamp={2} fontWeight="500" c="gray.6" size="sm" mb={'xs'}>
         {description}
-      </AppText>
+      </MAppText>
       <Flex>{bottomSection}</Flex>
     </Paper>
   )

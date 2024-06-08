@@ -6,7 +6,7 @@ import {
   IconCircleFilled,
   IconDots,
 } from '@tabler/icons-react'
-import { AppSize, AppText } from '@the-one/ui'
+import { MAppSize, MAppText } from '@the-one/mantine-ui'
 import { DataTable } from 'mantine-datatable'
 import { useEffect, useState } from 'react'
 import { Task, TaskType } from '../../../../types/tasks'
@@ -62,9 +62,9 @@ export const TasksTable: React.FC<Props> = ({ activeTaskColumns, records }) => {
               return (
                 <Flex gap={'xs'} align={'baseline'}>
                   <Badge radius={'sm'} variant='default'>{task.type}</Badge>
-                  <AppText fontWeight="500" truncate="end" size="sm">
+                  <MAppText fontWeight="500" truncate="end" size="sm">
                     {task.title}
-                  </AppText>
+                  </MAppText>
                 </Flex>
               )
             },
@@ -101,7 +101,7 @@ export const TasksTable: React.FC<Props> = ({ activeTaskColumns, records }) => {
                       <Menu.Target>
                         <Menu.Item
                           rightSection={
-                            <IconChevronRight size={AppSize['4xl']} />
+                            <IconChevronRight size={MAppSize['4xl']} />
                           }
                         >
                           Labels
@@ -113,7 +113,7 @@ export const TasksTable: React.FC<Props> = ({ activeTaskColumns, records }) => {
                             <Menu.Item
                               leftSection={
                                 <IconCircleFilled
-                                  size={AppSize.md}
+                                  size={MAppSize.md}
                                   style={{
                                     color:
                                       task.type === value

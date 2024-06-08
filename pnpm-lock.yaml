@@ -50,9 +50,9 @@ importers:
       '@tabler/icons-react':
         specifier: ^2.45.0
         version: 2.45.0(react@18.2.0)
-      '@the-one/ui':
+      '@the-one/mantine-ui':
         specifier: workspace:*
-        version: link:../../packages/ui
+        version: link:../../packages/mantine-ui
       '@trpc/server':
         specifier: ^10.44.1
         version: 10.45.0
@@ -222,27 +222,7 @@ importers:
         specifier: ^5.2.2
         version: 5.3.3
 
-  packages/types:
-    devDependencies:
-      '@the-one/eslint-config':
-        specifier: workspace:*
-        version: link:../eslint-config
-      '@the-one/typescript-config':
-        specifier: workspace:*
-        version: link:../typescript-config
-      '@types/eslint':
-        specifier: ^8.44.7
-        version: 8.56.1
-      eslint:
-        specifier: ^8.53.0
-        version: 8.56.0
-      typescript:
-        specifier: ^5.2.2
-        version: 5.3.3
-
-  packages/typescript-config: {}
-
-  packages/ui:
+  packages/mantine-ui:
     dependencies:
       '@mantine/core':
         specifier: ^7.3.2
@@ -296,6 +276,26 @@ importers:
       typescript:
         specifier: ^5.2.2
         version: 5.3.3
+
+  packages/types:
+    devDependencies:
+      '@the-one/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
+      '@the-one/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript-config
+      '@types/eslint':
+        specifier: ^8.44.7
+        version: 8.56.1
+      eslint:
+        specifier: ^8.53.0
+        version: 8.56.0
+      typescript:
+        specifier: ^5.2.2
+        version: 5.3.3
+
+  packages/typescript-config: {}
 
   packages/utils:
     devDependencies:

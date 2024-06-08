@@ -1,5 +1,5 @@
 import { Button, Flex, Modal, Switch } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 
 interface Props {
   opened: boolean
@@ -12,31 +12,31 @@ export const PlaygroundContentFilterModal: React.FC<Props> = ({
 }) => {
   return (
     <Modal size={'lg'} opened={opened} onClose={close} centered withCloseButton={false}>
-      <AppText fontWeight="600" size="lg">
+      <MAppText fontWeight="600" size="lg">
         Content filter preferences
-      </AppText>
-      <AppText c="dimmed" size="sm" mb="xl">
+      </MAppText>
+      <MAppText c="dimmed" size="sm" mb="xl">
         The content filter flags text that may violate our content policy. It's
         powered by our moderation endpoint which is free to use to moderate your
         OpenAI API traffic. Learn more.
-      </AppText>
+      </MAppText>
 
-      <AppText c="dimmed" size="sm" mb="xs">
+      <MAppText c="dimmed" size="sm" mb="xs">
         Playground Warnings
-      </AppText>
+      </MAppText>
 
       <Switch
         defaultChecked={true}
         label={
-          <AppText fontWeight="600" size="sm">
+          <MAppText fontWeight="600" size="sm">
             Show a warning when content is flagged
-          </AppText>
+          </MAppText>
         }
         description={
-          <AppText c="dimmed" size="sm">
+          <MAppText c="dimmed" size="sm">
             A warning will be shown when sexual, hateful, violent or self-harm
             content is detected.
-          </AppText>
+          </MAppText>
         }
       ></Switch>
 

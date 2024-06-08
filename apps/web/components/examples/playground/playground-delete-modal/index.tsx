@@ -1,6 +1,6 @@
 import { Button, Flex, Modal } from '@mantine/core'
 import { notifications } from '@mantine/notifications';
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 
 interface Props {
   opened: boolean
@@ -10,13 +10,13 @@ interface Props {
 export const PlaygroundDeleteModal: React.FC<Props> = ({ opened, close }) => {
   return (
     <Modal opened={opened} onClose={close} centered withCloseButton={false}>
-      <AppText fontWeight="600" size="lg">
+      <MAppText fontWeight="600" size="lg">
         Are you absolutely sure?
-      </AppText>
-      <AppText c="dimmed" size="sm" mb="md">
+      </MAppText>
+      <MAppText c="dimmed" size="sm" mb="md">
         This action cannot be undone. This preset will no longer be accessible
         by you or others you've shared it with.
-      </AppText>
+      </MAppText>
 
       <Flex mt={'lg'} gap='xs' justify={'flex-end'}>
         <Button variant="light" onClick={close}>

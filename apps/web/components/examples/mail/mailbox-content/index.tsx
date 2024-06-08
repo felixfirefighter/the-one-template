@@ -9,7 +9,7 @@ import {
   Tooltip,
 } from '@mantine/core'
 import { IconDotsVertical } from '@tabler/icons-react'
-import { AppIconStroke, AppProfileLogo, AppText } from '@the-one/ui'
+import { MAppIconStroke, MAppProfileLogo, MAppText } from '@the-one/mantine-ui'
 import { format } from 'date-fns'
 import { InboxMail } from '../../../../app/examples/mail/types'
 import { LEFT_ACTION_BUTTONS, MENU_ITEMS, RIGHT_ACTION_BUTTONS } from './data'
@@ -50,7 +50,7 @@ export const MailboxContent: React.FC<Props> = ({ activeMail }) => {
           <Menu position="bottom-end">
             <Menu.Target>
               <ActionIcon variant="subtle" size={'md'} ml={'xs'}>
-                <IconDotsVertical stroke={AppIconStroke.md} />
+                <IconDotsVertical stroke={MAppIconStroke.md} />
               </ActionIcon>
             </Menu.Target>
             <Menu.Dropdown>
@@ -67,30 +67,30 @@ export const MailboxContent: React.FC<Props> = ({ activeMail }) => {
       <Box p="sm">
         <Flex justify={'space-between'}>
           <Flex>
-            <AppProfileLogo username={activeMail.name}></AppProfileLogo>
+            <MAppProfileLogo username={activeMail.name}></MAppProfileLogo>
 
             <Box mx={'xs'}>
-              <AppText size="sm" fontWeight="700">
+              <MAppText size="sm" fontWeight="700">
                 {activeMail.name}
-              </AppText>
-              <AppText size="sm" c="gray.7">
+              </MAppText>
+              <MAppText size="sm" c="gray.7">
                 {activeMail.title}
-              </AppText>
+              </MAppText>
             </Box>
           </Flex>
 
-          <AppText size="sm" c="gray.6">
+          <MAppText size="sm" c="gray.6">
             {format(activeMail.date, 'PPpp')}
-          </AppText>
+          </MAppText>
         </Flex>
       </Box>
 
       <Divider />
 
       <Box p="sm" flex={1} className={styles.content}>
-        <AppText size="sm" style={{ whiteSpace: 'pre-wrap' }}>
+        <MAppText size="sm" style={{ whiteSpace: 'pre-wrap' }}>
           {activeMail.content}
-        </AppText>
+        </MAppText>
       </Box>
               
       <Divider />

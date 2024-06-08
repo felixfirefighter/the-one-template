@@ -1,6 +1,6 @@
 import { Box, Flex } from '@mantine/core'
 import React from 'react'
-import { AppText } from '../app-text'
+import { MAppText } from '../m-app-text'
 
 interface Props {
   prefix?: React.ReactNode
@@ -9,7 +9,7 @@ interface Props {
   suffix?: React.ReactNode
 }
 
-export const AppRichListItem: React.FC<Props> = ({
+export const MAppRichListItem: React.FC<Props> = ({
   prefix,
   title,
   subtitle,
@@ -19,12 +19,12 @@ export const AppRichListItem: React.FC<Props> = ({
     <Flex align={'center'} py={'xs'}>
       {prefix}
       <Box flex={1}>
-        <AppText fontWeight="500" size="sm">
+        <MAppText fontWeight="500" size="sm">
           {title}
-        </AppText>
-        <AppText c="gray.6" size="xs">
+        </MAppText>
+        <MAppText c="gray.6" size="xs">
           {subtitle}
-        </AppText>
+        </MAppText>
       </Box>
       {suffix}
     </Flex>

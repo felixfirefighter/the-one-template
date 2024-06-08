@@ -25,7 +25,7 @@ Check out the demo [here](https://the-one-template-web.vercel.app)
 `@the-one/database`: Schema and seed files powered by Prisma \
 `@the-one/eslint-config`: Collection of internal eslint configurations \
 `@the-one/typescript-config`: Collection of internal Typescript configurations \
-`@the-one/ui`: Shared UI components \
+`@the-one/mantine-ui`: Shared UI components \
 
 ### Commit changes
 

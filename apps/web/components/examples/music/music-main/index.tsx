@@ -2,7 +2,7 @@
 
 import { Box, Button, Flex, SegmentedControl } from '@mantine/core'
 import { IconPlus } from '@tabler/icons-react'
-import { AppSize } from '@the-one/ui'
+import { MAppSize } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { MusicView } from '../music-view'
 import { CONTROLS } from './data'
@@ -19,7 +19,7 @@ export const MusicMain = () => {
           value={activeControl}
           onChange={(value) => setActiveControl(value)}
         ></SegmentedControl>
-        <Button leftSection={<IconPlus size={AppSize['4xl']} />}>
+        <Button leftSection={<IconPlus size={MAppSize['4xl']} />}>
           Add music
         </Button>
       </Flex>

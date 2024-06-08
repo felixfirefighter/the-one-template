@@ -13,23 +13,23 @@ import {
   IconTriangleFilled,
   IconUsersGroup,
 } from '@tabler/icons-react'
-import { AppSize } from '@the-one/ui'
+import { MAppSize } from '@the-one/mantine-ui'
 
 export const ACCOUNTS = [
   {
     label: 'johndoe@theone.com',
     value: 'johndoe@theone.com',
-    icon: <IconTriangleFilled size={AppSize['4xl']} />,
+    icon: <IconTriangleFilled size={MAppSize['4xl']} />,
   },
   {
     label: 'johndoe@gmail.com',
     value: 'johndoe@gmail.com',
-    icon: <IconBrandGoogleFilled size={AppSize['4xl']} />,
+    icon: <IconBrandGoogleFilled size={MAppSize['4xl']} />,
   },
   {
     label: 'johndoe@icloud.com',
     value: 'johndoe@icloud.com',
-    icon: <IconCloudFilled size={AppSize['4xl']} />,
+    icon: <IconCloudFilled size={MAppSize['4xl']} />,
   },
 ]
 

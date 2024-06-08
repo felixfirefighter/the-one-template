@@ -6,7 +6,7 @@ import {
   IconCircleX,
   IconProgress,
 } from '@tabler/icons-react'
-import { AppIconSize, AppIconStroke, AppText } from '@the-one/ui'
+import { MAppIconSize, MAppIconStroke, MAppText } from '@the-one/mantine-ui'
 import { assertUnreachable } from '../../../../../../packages/utils/src'
 import { Task, TaskStatus } from '../../../../types/tasks'
 
@@ -18,19 +18,19 @@ export const TaskStatusItem: React.FC<Props> = ({ task }) => {
   const TaskIcon = () => {
     switch (task.status) {
       case TaskStatus.Todo:
-        return <IconCircle stroke={AppIconStroke.sm} size={AppIconSize.sm} />
+        return <IconCircle stroke={MAppIconStroke.sm} size={MAppIconSize.sm} />
       case TaskStatus.InProgress:
-        return <IconProgress stroke={AppIconStroke.sm} size={AppIconSize.sm} />
+        return <IconProgress stroke={MAppIconStroke.sm} size={MAppIconSize.sm} />
       case TaskStatus.Done:
         return (
-          <IconCircleCheck stroke={AppIconStroke.sm} size={AppIconSize.sm} />
+          <IconCircleCheck stroke={MAppIconStroke.sm} size={MAppIconSize.sm} />
         )
       case TaskStatus.Backlog:
         return (
-          <IconCircleLetterB stroke={AppIconStroke.sm} size={AppIconSize.sm} />
+          <IconCircleLetterB stroke={MAppIconStroke.sm} size={MAppIconSize.sm} />
         )
       case TaskStatus.Canceled:
-        return <IconCircleX stroke={AppIconStroke.sm} size={AppIconSize.sm} />
+        return <IconCircleX stroke={MAppIconStroke.sm} size={MAppIconSize.sm} />
       default:
         assertUnreachable(task.status)
     }
@@ -39,9 +39,9 @@ export const TaskStatusItem: React.FC<Props> = ({ task }) => {
   return (
     <Flex gap="xs" align={'center'}>
       <TaskIcon />
-      <AppText lh={1} size="sm">
+      <MAppText lh={1} size="sm">
         {task.status}
-      </AppText>
+      </MAppText>
     </Flex>
   )
 }

@@ -1,6 +1,6 @@
 import { Menu } from '@mantine/core'
 import { IconChevronRight } from '@tabler/icons-react'
-import { AppSize, AppText } from '@the-one/ui'
+import { MAppSize, MAppText } from '@the-one/mantine-ui'
 import clsx from 'clsx'
 import { HeaderItem } from '../music-header/types'
 import { MusicMenuItem } from '../music-menu-item'
@@ -40,12 +40,12 @@ export const MusicHeaderItem: React.FC<Props> = ({
           })}
           rightSection={
             <IconChevronRight
-              size={AppSize['4xl']}
+              size={MAppSize['4xl']}
               color="var(--mantine-color-gray-6)"
             />
           }
         >
-          <AppText size="sm">{item.title}</AppText>
+          <MAppText size="sm">{item.title}</MAppText>
         </Menu.Item>
       </Menu.Target>
       <Menu.Dropdown>

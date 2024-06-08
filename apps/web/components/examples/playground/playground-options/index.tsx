@@ -8,7 +8,7 @@ import {
   Slider,
   useCombobox,
 } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { MODELS, MODES } from './data'
 import styles from './index.module.css'
@@ -31,9 +31,9 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
   return (
     <Box px={'sm'} className={styles.options}>
       <Box mb={'lg'}>
-        <AppText fontWeight="600" size="sm" mb={'xs'}>
+        <MAppText fontWeight="600" size="sm" mb={'xs'}>
           Mode
-        </AppText>
+        </MAppText>
         <SegmentedControl
           size="xs"
           fullWidth
@@ -44,9 +44,9 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
       </Box>
 
       <Box mb={'lg'}>
-        <AppText fontWeight="600" size="sm" mb={'xs'}>
+        <MAppText fontWeight="600" size="sm" mb={'xs'}>
           Model
-        </AppText>
+        </MAppText>
         <Combobox
           withinPortal={false}
           store={combobox}
@@ -89,19 +89,19 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
                           </HoverCard.Target>
                           <HoverCard.Dropdown>
                             <Box>
-                              <AppText fontWeight="600" mb={'xs'}>
+                              <MAppText fontWeight="600" mb={'xs'}>
                                 {item.label}
-                              </AppText>
-                              <AppText c="dimmed" size="sm" mb={'lg'}>
+                              </MAppText>
+                              <MAppText c="dimmed" size="sm" mb={'lg'}>
                                 {item.description.main}
-                              </AppText>
+                              </MAppText>
 
-                              <AppText size="sm" fontWeight="600">
+                              <MAppText size="sm" fontWeight="600">
                                 Strengths
-                              </AppText>
-                              <AppText c="dimmed" size="sm">
+                              </MAppText>
+                              <MAppText c="dimmed" size="sm">
                                 {item.description.strengths}
-                              </AppText>
+                              </MAppText>
                             </Box>
                           </HoverCard.Dropdown>
                         </HoverCard>
@@ -119,12 +119,12 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
         <HoverCard.Target>
           <Box mb={'lg'}>
             <Flex justify={'space-between'}>
-              <AppText fontWeight="600" size="sm" mb={'md'}>
+              <MAppText fontWeight="600" size="sm" mb={'md'}>
                 Temperature
-              </AppText>
-              <AppText size="sm" c="dimmed">
+              </MAppText>
+              <MAppText size="sm" c="dimmed">
                 {temperature.toFixed(2)}
-              </AppText>
+              </MAppText>
             </Flex>
             <Slider
               label={null}
@@ -138,11 +138,11 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
         </HoverCard.Target>
         <HoverCard.Dropdown>
           <Box>
-            <AppText size="sm">
+            <MAppText size="sm">
               Controls randomness: lowering results in less random completions.
               As the temperature approaches zero, the model will become
               deterministic and repetitive.
-            </AppText>
+            </MAppText>
           </Box>
         </HoverCard.Dropdown>
       </HoverCard>
@@ -151,12 +151,12 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
         <HoverCard.Target>
           <Box mb={'lg'}>
             <Flex justify={'space-between'}>
-              <AppText fontWeight="600" size="sm" mb={'md'}>
+              <MAppText fontWeight="600" size="sm" mb={'md'}>
                 Maximum Length
-              </AppText>
-              <AppText size="sm" c="dimmed">
+              </MAppText>
+              <MAppText size="sm" c="dimmed">
                 {maxLen}
-              </AppText>
+              </MAppText>
             </Flex>
             <Slider
               label={null}
@@ -170,11 +170,11 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
         </HoverCard.Target>
         <HoverCard.Dropdown>
           <Box>
-            <AppText size="sm">
+            <MAppText size="sm">
               The maximum number of tokens to generate. Requests can use up to
               2,048 or 4,000 tokens, shared between prompt and completion. The
               exact limit varies by model.
-            </AppText>
+            </MAppText>
           </Box>
         </HoverCard.Dropdown>
       </HoverCard>
@@ -183,12 +183,12 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
         <HoverCard.Target>
           <Box mb={'lg'}>
             <Flex justify={'space-between'}>
-              <AppText fontWeight="600" size="sm" mb={'md'}>
+              <MAppText fontWeight="600" size="sm" mb={'md'}>
                 Top P
-              </AppText>
-              <AppText size="sm" c="dimmed">
+              </MAppText>
+              <MAppText size="sm" c="dimmed">
                 {topP}
-              </AppText>
+              </MAppText>
             </Flex>
             <Slider
               label={null}
@@ -202,10 +202,10 @@ export const PlaygroundOptions: React.FC<Props> = ({ mode, setMode }) => {
         </HoverCard.Target>
         <HoverCard.Dropdown>
           <Box>
-            <AppText size="sm">
+            <MAppText size="sm">
               Control diversity via nucleus sampling: 0.5 means half of all
               likelihood-weighted options are considered.
-            </AppText>
+            </MAppText>
           </Box>
         </HoverCard.Dropdown>
       </HoverCard>

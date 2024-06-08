@@ -1,6 +1,6 @@
 import { Box, Flex } from '@mantine/core'
 import React from 'react'
-import { AppText } from '../app-text'
+import { MAppText } from '../m-app-text'
 import styles from './index.module.css'
 import clsx from 'clsx'
 
@@ -14,7 +14,7 @@ interface Props {
   onClick?: () => void
 }
 
-export const AppSelectItem: React.FC<Props> = ({
+export const MAppSelectItem: React.FC<Props> = ({
   prefix,
   title,
   subtitle,
@@ -30,12 +30,12 @@ export const AppSelectItem: React.FC<Props> = ({
     >
       {prefix}
       <Box px={'sm'} flex={1}>
-        <AppText fontWeight="500" size="sm" lh={1} mb={'xs'}>
+        <MAppText fontWeight="500" size="sm" lh={1} mb={'xs'}>
           {title}
-        </AppText>
-        <AppText c="gray.6" size="sm" lh={1}>
+        </MAppText>
+        <MAppText c="gray.6" size="sm" lh={1}>
           {subtitle}
-        </AppText>
+        </MAppText>
       </Box>
       {suffix}
     </Flex>

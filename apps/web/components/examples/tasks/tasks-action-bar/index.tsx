@@ -2,7 +2,7 @@
 
 import { Button, Flex, Menu, TextInput } from '@mantine/core'
 import { IconAdjustmentsHorizontal, IconCheck } from '@tabler/icons-react'
-import { AppSize } from '@the-one/ui'
+import { MAppSize } from '@the-one/mantine-ui'
 
 interface Props {
   activeTaskColumns: {
@@ -41,7 +41,7 @@ export const TasksActionBar: React.FC<Props> = ({
                 key={key}
                 leftSection={
                   <IconCheck
-                    size={AppSize['3xl']}
+                    size={MAppSize['3xl']}
                     style={{
                       color: value ? undefined : 'transparent',
                     }}

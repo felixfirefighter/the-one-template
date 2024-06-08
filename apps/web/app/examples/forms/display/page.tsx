@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, Button, Checkbox, Container, Divider } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { SIDEBAR_DISPLAYS } from './data'
 
@@ -10,21 +10,21 @@ export default function Page(): JSX.Element {
 
   return (
     <Container size={'sm'} m={0}>
-      <AppText size="lg" fontWeight="600">
+      <MAppText size="lg" fontWeight="600">
         Display
-      </AppText>
-      <AppText c="gray.6" size="sm">
+      </MAppText>
+      <MAppText c="gray.6" size="sm">
         Turn items on or off to control what's displayed in the app
-      </AppText>
+      </MAppText>
 
       <Divider my={'lg'}></Divider>
 
-      <AppText size="md" fontWeight="500">
+      <MAppText size="md" fontWeight="500">
         Sidebar
-      </AppText>
-      <AppText c="gray.6" size="sm" mb={'sm'}>
+      </MAppText>
+      <MAppText c="gray.6" size="sm" mb={'sm'}>
         Select the items you want to display in the sidebar
-      </AppText>
+      </MAppText>
 
       {sidebarDisplays.map((display) => {
         return (

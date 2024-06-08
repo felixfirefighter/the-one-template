@@ -6,35 +6,35 @@ import {
   IconCornerUpRight,
   IconTrash,
 } from '@tabler/icons-react'
-import { AppIconStroke } from '@the-one/ui'
+import { MAppIconStroke } from '@the-one/mantine-ui'
 
 export const LEFT_ACTION_BUTTONS = [
   {
     label: 'Archive',
-    icon: <IconArchive stroke={AppIconStroke.md} />,
+    icon: <IconArchive stroke={MAppIconStroke.md} />,
   },
   {
     label: 'Move to trash',
-    icon: <IconTrash stroke={AppIconStroke.md} />,
+    icon: <IconTrash stroke={MAppIconStroke.md} />,
   },
   {
     label: 'Snooze',
-    icon: <IconClock stroke={AppIconStroke.md} />,
+    icon: <IconClock stroke={MAppIconStroke.md} />,
   },
 ]
 
 export const RIGHT_ACTION_BUTTONS = [
   {
     label: 'Reply',
-    icon: <IconCornerUpLeft stroke={AppIconStroke.md} />,
+    icon: <IconCornerUpLeft stroke={MAppIconStroke.md} />,
   },
   {
     label: 'Reply all',
-    icon: <IconCornerUpLeftDouble stroke={AppIconStroke.md} />,
+    icon: <IconCornerUpLeftDouble stroke={MAppIconStroke.md} />,
   },
   {
     label: 'Forward',
-    icon: <IconCornerUpRight stroke={AppIconStroke.md} />,
+    icon: <IconCornerUpRight stroke={MAppIconStroke.md} />,
   },
 ]
 

@@ -1,5 +1,5 @@
 import { Paper } from '@mantine/core'
-import { AppSelectItem, AppText } from '@the-one/ui'
+import { MAppSelectItem, MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { DATA } from './data'
 
@@ -8,16 +8,16 @@ export const NotificationCard = () => {
 
   return (
     <Paper shadow="md" p="lg" withBorder>
-      <AppText size="xl" fontWeight="700">
+      <MAppText size="xl" fontWeight="700">
         Notifications
-      </AppText>
-      <AppText c="gray.6" size="sm" mb="xs">
+      </MAppText>
+      <MAppText c="gray.6" size="sm" mb="xs">
         Choose what you want to be notified about
-      </AppText>
+      </MAppText>
 
       {DATA.map((item) => {
         return (
-          <AppSelectItem
+          <MAppSelectItem
             key={item.id}
             prefix={item.icon}
             title={item.title}

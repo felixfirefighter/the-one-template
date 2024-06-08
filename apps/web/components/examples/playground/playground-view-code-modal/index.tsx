@@ -1,5 +1,5 @@
 import { Code, Modal } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 
 interface Props {
   opened: boolean
@@ -25,22 +25,22 @@ response = openai.Completion.create(
 
   return (
     <Modal size={'lg'} opened={opened} onClose={close} centered withCloseButton={false}>
-      <AppText fontWeight="600" size="lg">
+      <MAppText fontWeight="600" size="lg">
         View code
-      </AppText>
-      <AppText c="dimmed" size="sm">
+      </MAppText>
+      <MAppText c="dimmed" size="sm">
         You can use the following code to start integrating your current prompt
         and settings into your application.
-      </AppText>
+      </MAppText>
 
       <Code block my={'md'} bg="dark.9" c="white">
         {codeBlock}
       </Code>
 
-      <AppText c="dimmed" size="sm">
+      <MAppText c="dimmed" size="sm">
         Your API Key can be found here. You should use environment variables or
         a secret management tool to expose your key to your applications.{' '}
-      </AppText>
+      </MAppText>
     </Modal>
   )
 }

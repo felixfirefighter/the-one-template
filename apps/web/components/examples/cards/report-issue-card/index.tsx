@@ -1,7 +1,7 @@
 'use client'
 
 import { Button, Flex, Paper, Select, TextInput, Textarea } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { PRIORITIES, TYPES } from './data'
 
@@ -11,12 +11,12 @@ export const ReportIssueCard = () => {
 
   return (
     <Paper shadow="md" p="lg" withBorder>
-      <AppText size="xl" fontWeight="700">
+      <MAppText size="xl" fontWeight="700">
         Report an issue
-      </AppText>
-      <AppText c="gray.6" size="sm" mb="xs">
+      </MAppText>
+      <MAppText c="gray.6" size="sm" mb="xs">
         What area are you having problems with?
-      </AppText>
+      </MAppText>
 
       <Flex mb="xs" gap={'lg'}>
         <Select

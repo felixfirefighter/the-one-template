@@ -1,5 +1,5 @@
 import { IconCheck, IconMicrophone2, IconWorld } from '@tabler/icons-react'
-import { AppSize } from '@the-one/ui'
+import { MAppSize } from '@the-one/mantine-ui'
 import { HeaderProps } from './types'
 
 export const HEADERS: HeaderProps[] = [
@@ -162,11 +162,11 @@ export const HEADERS: HeaderProps[] = [
       },
       {
         title: 'Smart Dictation',
-        subText: <IconMicrophone2 stroke={1.5} size={AppSize['4xl']} />,
+        subText: <IconMicrophone2 stroke={1.5} size={MAppSize['4xl']} />,
       },
       {
         title: 'EMoji & Symbols',
-        subText: <IconWorld stroke={1.5} size={AppSize['4xl']} />,
+        subText: <IconWorld stroke={1.5} size={MAppSize['4xl']} />,
       },
     ],
   },
@@ -178,7 +178,7 @@ export const HEADERS: HeaderProps[] = [
       },
       {
         title: 'Show Lyrics',
-        prefix: <IconCheck stroke={1.5} size={AppSize['4xl']} />,
+        prefix: <IconCheck stroke={1.5} size={MAppSize['4xl']} />,
       },
       {
         title: 'Show Status Bar',

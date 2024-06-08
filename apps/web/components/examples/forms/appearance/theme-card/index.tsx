@@ -1,5 +1,5 @@
 import { Box, Paper } from '@mantine/core'
-import { AppSize } from '@the-one/ui'
+import { MAppSize } from '@the-one/mantine-ui'
 
 interface Props {
   active?: boolean
@@ -17,7 +17,7 @@ export const ThemeCard: React.FC<Props> = ({ active, theme, onClick }) => {
       bg={theme === 'light' ? 'gray.1' : 'dark.5'}
       style={{
         border: '2px solid',
-        borderRadius: AppSize.md,
+        borderRadius: MAppSize.md,
         borderColor: active ? borderColor : 'transparent',
       }}
       onClick={onClick}

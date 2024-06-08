@@ -9,7 +9,7 @@ import {
   Radio,
   Switch,
 } from '@mantine/core'
-import { AppRichListItem, AppText } from '@the-one/ui'
+import { MAppRichListItem, MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { EMAIL_NOTIFICATIONS, NOTIFICATIONS } from './data'
 
@@ -21,18 +21,18 @@ export default function Page(): JSX.Element {
 
   return (
     <Container size={'sm'} m={0}>
-      <AppText size="lg" fontWeight="600">
+      <MAppText size="lg" fontWeight="600">
         Notifications
-      </AppText>
-      <AppText c="gray.6" size="sm">
+      </MAppText>
+      <MAppText c="gray.6" size="sm">
         Configure how you receive notifications
-      </AppText>
+      </MAppText>
 
       <Divider my={'lg'}></Divider>
 
-      <AppText size="md" fontWeight="500">
+      <MAppText size="md" fontWeight="500">
         Notify me about:
-      </AppText>
+      </MAppText>
       <Radio.Group
         onChange={(e) => setNotification(e)}
         value={notification}
@@ -50,14 +50,14 @@ export default function Page(): JSX.Element {
         })}
       </Radio.Group>
 
-      <AppText size="md" fontWeight="500">
+      <MAppText size="md" fontWeight="500">
         Email Notifications
-      </AppText>
+      </MAppText>
 
       {emailNotifications.map((notification) => {
         return (
           <Paper key={notification.label} withBorder px={'md'} my={'xs'} shadow='none'>
-            <AppRichListItem
+            <MAppRichListItem
               title={notification.label}
               subtitle={notification.description}
               suffix={
@@ -76,7 +76,7 @@ export default function Page(): JSX.Element {
                   }}
                 ></Switch>
               }
-            ></AppRichListItem>
+            ></MAppRichListItem>
           </Paper>
         )
       })}

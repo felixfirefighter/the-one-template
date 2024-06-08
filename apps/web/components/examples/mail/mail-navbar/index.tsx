@@ -1,5 +1,5 @@
 import { Box, Divider, NavLink, Select } from '@mantine/core'
-import { AppText, AppWidth } from '@the-one/ui'
+import { MAppText, MAppWidth } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { ACCOUNTS, GROUP_LINKS, NAV_LINKS } from './data'
 import styles from './index.module.css'
@@ -8,7 +8,7 @@ export const MailNavbar = () => {
   const [activeAccount, setActiveAccount] = useState(ACCOUNTS[0])
 
   return (
-    <Box w={AppWidth.Navbar} className={styles.box}>
+    <Box w={MAppWidth.Navbar} className={styles.box}>
       <Select
         p="sm"
         data={ACCOUNTS}
@@ -31,9 +31,9 @@ export const MailNavbar = () => {
               leftSection={link.icon}
               active={link.active}
               rightSection={
-                <AppText size="sm" fontWeight={'500'}>
+                <MAppText size="sm" fontWeight={'500'}>
                   {link.count}
-                </AppText>
+                </MAppText>
               }
             ></NavLink>
           )
@@ -48,9 +48,9 @@ export const MailNavbar = () => {
               label={link.label}
               leftSection={link.icon}
               rightSection={
-                <AppText size="sm" fontWeight={'500'}>
+                <MAppText size="sm" fontWeight={'500'}>
                   {link.count}
-                </AppText>
+                </MAppText>
               }
             ></NavLink>
           )

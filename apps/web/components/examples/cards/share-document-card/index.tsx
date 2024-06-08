@@ -7,7 +7,7 @@ import {
   Select,
   TextInput,
 } from '@mantine/core'
-import { AppRichListItem, AppText } from '@the-one/ui'
+import { MAppRichListItem, MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 import { DATA, PERMISSIONS } from './data'
 
@@ -16,12 +16,12 @@ export const ShareDocumentCard = () => {
 
   return (
     <Paper shadow="md" p="lg" withBorder>
-      <AppText size="xl" fontWeight="700">
+      <MAppText size="xl" fontWeight="700">
         Share document
-      </AppText>
-      <AppText c="gray.6" size="sm" mb="xs">
+      </MAppText>
+      <MAppText c="gray.6" size="sm" mb="xs">
         Anyone with the link can view this document
-      </AppText>
+      </MAppText>
 
       <Flex gap="xs" my={'lg'}>
         <TextInput
@@ -38,12 +38,12 @@ export const ShareDocumentCard = () => {
         </CopyButton>
       </Flex>
 
-    <AppText size="sm" fontWeight="500" mb="xs">
+    <MAppText size="sm" fontWeight="500" mb="xs">
         People with access
-      </AppText>
+      </MAppText>
       {users.map((item) => {
         return (
-          <AppRichListItem
+          <MAppRichListItem
             key={item.username}
             prefix={<Avatar src={item.img} mr='xs' />}
             title={item.username}

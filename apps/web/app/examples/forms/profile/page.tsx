@@ -6,18 +6,18 @@ import {
   TextInput,
   Textarea,
 } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { UrlInputs } from '../../../../components/examples/forms/profile/url-inputs'
 
 export default function Page(): JSX.Element {
   return (
     <Container size={'sm'} m={0}>
-      <AppText size="lg" fontWeight="600">
+      <MAppText size="lg" fontWeight="600">
         Profile
-      </AppText>
-      <AppText c="gray.6" size="sm">
+      </MAppText>
+      <MAppText c="gray.6" size="sm">
         This is how others will see you on the site.
-      </AppText>
+      </MAppText>
 
       <Divider my={'lg'}></Divider>
 

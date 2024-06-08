@@ -1,7 +1,7 @@
 import { Box, useMantineTheme } from '@mantine/core'
 import React from 'react'
-import { AppSize } from '../..'
-import { AppText } from '../app-text'
+import { MAppSize } from '../..'
+import { MAppText } from '../m-app-text'
 import styles from './index.module.css'
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
   onClick: () => void
 }
 
-export const AppSimpleSelectCard: React.FC<Props> = ({ active, flex, title, icon, onClick }) => {
+export const MAppSimpleSelectCard: React.FC<Props> = ({ active, flex, title, icon, onClick }) => {
   const theme = useMantineTheme()
 
   return (
@@ -24,15 +24,15 @@ export const AppSimpleSelectCard: React.FC<Props> = ({ active, flex, title, icon
       py={'md'}
       px={'xl'}
       style={{
-        borderRadius: AppSize.md,
+        borderRadius: MAppSize.md,
         borderColor: active ? theme.colors.dark[7] : theme.colors.gray[2],
       }}
       onClick={onClick}
     >
       {icon}
-      <AppText size="sm" fontWeight="500">
+      <MAppText size="sm" fontWeight="500">
         {title}
-      </AppText>
+      </MAppText>
     </Box>
   )
 }

@@ -14,7 +14,7 @@ import {
 } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { IconCopy, IconDots } from '@tabler/icons-react'
-import { AppButtonSize, AppIconSize, AppIconStroke, AppText } from '@the-one/ui'
+import { MAppButtonSize, MAppIconSize, MAppIconStroke, MAppText } from '@the-one/mantine-ui'
 import { PlaygroundContentFilterModal } from '../playground-content-filter-modal'
 import { PlaygroundDeleteModal } from '../playground-delete-modal'
 import { PlaygroundSaveModal } from '../playground-save-modal'
@@ -49,9 +49,9 @@ export const PlaygroundHeader = () => {
         align={'baseline'}
         justify={'space-between'}
       >
-        <AppText fontWeight="700" size="lg">
+        <MAppText fontWeight="700" size="lg">
           Playground
-        </AppText>
+        </MAppText>
 
         <Flex gap={'sm'} align={'center'}>
           <Select
@@ -77,13 +77,13 @@ export const PlaygroundHeader = () => {
               <Button variant="light">Share</Button>
             </Popover.Target>
             <Popover.Dropdown>
-              <AppText fontWeight="600" size="lg">
+              <MAppText fontWeight="600" size="lg">
                 Share preset
-              </AppText>
-              <AppText size="sm" c="dimmed" mb={'md'}>
+              </MAppText>
+              <MAppText size="sm" c="dimmed" mb={'md'}>
                 Anyone who has this link and an OpenAI account will be able to
                 view this.
-              </AppText>
+              </MAppText>
 
               <Flex gap={'sm'}>
                 <TextInput
@@ -96,10 +96,10 @@ export const PlaygroundHeader = () => {
 
                 <CopyButton value="https://platform.openai.com/playground/p/8freNmVb8NGcdUOLae">
                   {({ copy }) => (
-                    <ActionIcon size={AppButtonSize.sm} onClick={copy}>
+                    <ActionIcon size={MAppButtonSize.sm} onClick={copy}>
                       <IconCopy
-                        stroke={AppIconStroke.md}
-                        size={AppIconSize.sm}
+                        stroke={MAppIconStroke.md}
+                        size={MAppIconSize.sm}
                       />
                     </ActionIcon>
                   )}
@@ -110,19 +110,19 @@ export const PlaygroundHeader = () => {
 
           <Menu position="bottom-end">
             <Menu.Target>
-              <ActionIcon variant="light" size={AppButtonSize.sm}>
+              <ActionIcon variant="light" size={MAppButtonSize.sm}>
                 <IconDots />
               </ActionIcon>
             </Menu.Target>
             <Menu.Dropdown>
               <Menu.Item onClick={openContentFilterModal}>
-                <AppText size="sm">Content filter preferences</AppText>
+                <MAppText size="sm">Content filter preferences</MAppText>
               </Menu.Item>
               <Menu.Divider />
               <Menu.Item onClick={openDeleteModal}>
-                <AppText size="sm" c="red">
+                <MAppText size="sm" c="red">
                   Delete preset
-                </AppText>
+                </MAppText>
               </Menu.Item>
             </Menu.Dropdown>
           </Menu>

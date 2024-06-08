@@ -1,5 +1,5 @@
 import { Avatar, Paper, Select } from '@mantine/core'
-import { AppRichListItem, AppText } from '@the-one/ui'
+import { MAppRichListItem, MAppText } from '@the-one/mantine-ui'
 import { DATA, ROLES } from './data'
 import { useState } from 'react'
 
@@ -9,16 +9,16 @@ export const TeamMembersCard = () => {
 
   return (
     <Paper shadow="md" p="lg" withBorder>
-      <AppText size="xl" fontWeight="700">
+      <MAppText size="xl" fontWeight="700">
         Team members
-      </AppText>
-      <AppText c="gray.6" size="sm" mb='xs'>
+      </MAppText>
+      <MAppText c="gray.6" size="sm" mb='xs'>
         Invite your team members to collaborate
-      </AppText>
+      </MAppText>
 
       {users.map((item) => {
         return (
-          <AppRichListItem
+          <MAppRichListItem
             key={item.username}
             prefix={<Avatar src={item.img} mr='xs' />}
             title={item.username}

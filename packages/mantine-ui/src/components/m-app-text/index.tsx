@@ -23,7 +23,7 @@ interface Props {
   truncate?: TextTruncate
 }
 
-export const AppText: React.FC<Props> = ({
+export const MAppText: React.FC<Props> = ({
   size = 'md',
   w,
   c,

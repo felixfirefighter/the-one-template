@@ -1,6 +1,6 @@
 import { Box, Button, Flex, Paper, Pill } from '@mantine/core'
 import { IconCircle, IconSquare, IconStar } from '@tabler/icons-react'
-import { AppSize, AppText } from '@the-one/ui'
+import { MAppSize, MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'
 
 export const ProjectCard = () => {
@@ -10,14 +10,14 @@ export const ProjectCard = () => {
     <Paper shadow="md" p="lg" withBorder>
       <Flex>
         <Box flex={1} mr={'xs'}>
-          <AppText fontWeight="500">the-one</AppText>
-          <AppText c="gray.6" size="sm" mb="lg">
+          <MAppText fontWeight="500">the-one</MAppText>
+          <MAppText c="gray.6" size="sm" mb="lg">
             Beautiful template built on top of Mantine that you can copy and
             paste into your apps. Accessible. Open Source.
-          </AppText>
+          </MAppText>
         </Box>
         <Button
-          leftSection={<IconStar size={AppSize['3xl']} />}
+          leftSection={<IconStar size={MAppSize['3xl']} />}
           rightSection={<Pill w={30}>{isStarred ? 1 : 0}</Pill>}
           onClick={() => setIsStarred(!isStarred)}
         >
@@ -27,22 +27,22 @@ export const ProjectCard = () => {
 
       <Flex align={'center'} gap="md" c="gray.6">
         <Flex align={'center'} gap="xs">
-          <IconSquare size={AppSize.xl} />
-          <AppText size="sm" lh={1}>
+          <IconSquare size={MAppSize.xl} />
+          <MAppText size="sm" lh={1}>
             TypeScript
-          </AppText>
+          </MAppText>
         </Flex>
 
         <Flex align={'center'} gap="xs">
-          <IconCircle size={AppSize.xl} />
-          <AppText size="sm" lh={1}>
+          <IconCircle size={MAppSize.xl} />
+          <MAppText size="sm" lh={1}>
             React
-          </AppText>
+          </MAppText>
         </Flex>
 
-        <AppText size="sm" lh={1}>
+        <MAppText size="sm" lh={1}>
           Updated January 2023
-        </AppText>
+        </MAppText>
       </Flex>
     </Paper>
   )

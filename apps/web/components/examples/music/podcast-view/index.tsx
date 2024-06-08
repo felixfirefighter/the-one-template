@@ -1,23 +1,23 @@
 import { Box, Button, Paper, Space } from '@mantine/core'
 import { IconBuildingBroadcastTower } from '@tabler/icons-react'
-import { AppIconStroke, AppSize, AppText } from '@the-one/ui'
+import { MAppIconStroke, MAppSize, MAppText } from '@the-one/mantine-ui'
 import styles from './index.module.css'
 
 export const PodcastView = () => {
   return (
     <Box>
-      <AppText fontWeight="600" size="2xl">
+      <MAppText fontWeight="600" size="2xl">
         Podcasts
-      </AppText>
-      <AppText c="gray.6" mb={'lg'}>
+      </MAppText>
+      <MAppText c="gray.6" mb={'lg'}>
         Your favorite podcasts.
-      </AppText>
+      </MAppText>
 
       <Paper h={480} withBorder shadow="none" className={styles.podcastBox}>
-        <IconBuildingBroadcastTower size={AppSize['7xl']} stroke={AppIconStroke.md} className={styles.icon}/>
+        <IconBuildingBroadcastTower size={MAppSize['7xl']} stroke={MAppIconStroke.md} className={styles.icon}/>
         <Space mb='xs'/>
-        <AppText fontWeight='700' mb={'xs'} size='lg'>No episodes added</AppText>
-        <AppText mb={'lg'} c='gray.6' size='sm'>You have not added any podcasts. Add one below.</AppText>
+        <MAppText fontWeight='700' mb={'xs'} size='lg'>No episodes added</MAppText>
+        <MAppText mb={'lg'} c='gray.6' size='sm'>You have not added any podcasts. Add one below.</MAppText>
         <Button>Add Podcast</Button>
       </Paper>
     </Box>

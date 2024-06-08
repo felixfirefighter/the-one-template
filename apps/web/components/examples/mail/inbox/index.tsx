@@ -1,6 +1,6 @@
 import { Box, Divider, Pill, TextInput } from '@mantine/core'
 import { IconSearch } from '@tabler/icons-react'
-import { AppInboxCard, AppSize, AppText } from '@the-one/ui'
+import { MAppInboxCard, MAppSize, MAppText } from '@the-one/mantine-ui'
 import { formatDistance } from 'date-fns'
 import { MAILS } from '../../../../app/examples/mail/data'
 import { InboxMail } from '../../../../app/examples/mail/types'
@@ -15,9 +15,9 @@ export const Inbox: React.FC<Props> = ({ activeMail, setActiveMail }) => {
   return (
     <Box flex={1} className={styles.container}>
       <Box p="sm">
-        <AppText fontWeight="700" size="2xl">
+        <MAppText fontWeight="700" size="2xl">
           Inbox
-        </AppText>
+        </MAppText>
       </Box>
 
       <Divider />
@@ -25,14 +25,14 @@ export const Inbox: React.FC<Props> = ({ activeMail, setActiveMail }) => {
       <Box p="sm">
         <TextInput
           placeholder="Search"
-          leftSection={<IconSearch size={AppSize['4xl']} />}
+          leftSection={<IconSearch size={MAppSize['4xl']} />}
         ></TextInput>
       </Box>
 
       <Box px="sm" className={styles.mails}>
         {MAILS.map((mail) => {
           return (
-            <AppInboxCard
+            <MAppInboxCard
               key={mail.title}
               header={mail.title}
               title={mail.name}
@@ -40,9 +40,9 @@ export const Inbox: React.FC<Props> = ({ activeMail, setActiveMail }) => {
               active={activeMail.title === mail.title}
               onClick={() => setActiveMail(mail)}
               rightSection={
-                <AppText size="sm" c="gray.6">
+                <MAppText size="sm" c="gray.6">
                   {formatDistance(mail.date, new Date(), { addSuffix: true })}
-                </AppText>
+                </MAppText>
               }
               bottomSection={
                 <>

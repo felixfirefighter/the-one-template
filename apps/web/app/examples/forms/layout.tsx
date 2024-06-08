@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, Container, Divider, Flex, NavLink } from '@mantine/core'
-import { AppText, AppWidth } from '@the-one/ui'
+import { MAppText, MAppWidth } from '@the-one/mantine-ui'
 import { NAV_LINKS } from './data'
 import { usePathname } from 'next/navigation'
 
@@ -14,15 +14,15 @@ export default function Layout({
 
   return (
     <Container size={'xl'} p="xl">
-      <AppText size="2xl" fontWeight="700">
+      <MAppText size="2xl" fontWeight="700">
         Settings
-      </AppText>
-      <AppText c="gray.6">Manage your profile and accounts settings</AppText>
+      </MAppText>
+      <MAppText c="gray.6">Manage your profile and accounts settings</MAppText>
 
       <Divider my={'lg'}></Divider>
 
       <Flex>
-        <Container p={0} m={0} w={AppWidth.Navbar}>
+        <Container p={0} m={0} w={MAppWidth.Navbar}>
           {NAV_LINKS.map((link) => {
             return (
               <NavLink

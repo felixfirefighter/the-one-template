@@ -1,7 +1,7 @@
 'use client'
 
 import { Avatar, Box, Flex, Menu } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { PROFILE_ITEMS } from './data'
 import styles from './index.module.css'
 
@@ -9,12 +9,12 @@ export const TasksHeader = () => {
   return (
     <Flex mb="xl" justify={'space-between'} align={'center'}>
       <Box>
-        <AppText size="xl" fontWeight="700">
+        <MAppText size="xl" fontWeight="700">
           Welcome back!
-        </AppText>
-        <AppText c="dimmed">
+        </MAppText>
+        <MAppText c="dimmed">
           Here's a list of your tasks for this month!
-        </AppText>
+        </MAppText>
       </Box>
 
       <Menu width={200} position="bottom-end">
@@ -27,10 +27,10 @@ export const TasksHeader = () => {
         </Menu.Target>
         <Menu.Dropdown>
           <Menu.Label>
-            <AppText c="dark" size="sm">
+            <MAppText c="dark" size="sm">
               The One
-            </AppText>
-            <AppText size="xs">abby@theone.com</AppText>
+            </MAppText>
+            <MAppText size="xs">abby@theone.com</MAppText>
           </Menu.Label>
           <Menu.Divider />
           {PROFILE_ITEMS.map((item) => {
@@ -39,11 +39,11 @@ export const TasksHeader = () => {
                 <Menu.Item
                   rightSection={
                     item.shortcut && (
-                      <AppText c="dimmed" size='xs'>{item.shortcut}</AppText>
+                      <MAppText c="dimmed" size='xs'>{item.shortcut}</MAppText>
                     )
                   }
                 >
-                  <AppText size='sm'>{item.label}</AppText>
+                  <MAppText size='sm'>{item.label}</MAppText>
                 </Menu.Item>
 
                 {item.divider && <Menu.Divider />}

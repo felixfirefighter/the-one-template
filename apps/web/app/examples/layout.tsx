@@ -1,5 +1,5 @@
 import { Container, Paper } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { ExampleNavigations } from '../../components/examples/example-navigations'
 
 export default function Layout({
@@ -10,13 +10,13 @@ export default function Layout({
   return (
     <Container size={'xl'} py={'xl'}>
       <Container py={'xl'}>
-        <AppText mb="lg" size="6xl" fontWeight="700" ta="center">
+        <MAppText mb="lg" size="6xl" fontWeight="700" ta="center">
           Check out the examples
-        </AppText>
-        <AppText ta="center" size="xl" c="gray.6">
+        </MAppText>
+        <MAppText ta="center" size="xl" c="gray.6">
           Authentication, cards, dashboard, forms, music and more. Look at the
           examples and get inspired to build your own.
-        </AppText>
+        </MAppText>
       </Container>
 
       <ExampleNavigations />

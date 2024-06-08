@@ -1,5 +1,5 @@
 import { Box, Paper } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 
 interface Props {
   title: string
@@ -15,16 +15,16 @@ export const OverviewCard: React.FC<Props> = ({
   return (
     <Paper radius={'lg'} shadow='sm' p={24} withBorder>
       <Box mb={4}>
-        <AppText fontWeight="500">
+        <MAppText fontWeight="500">
           {title}
-        </AppText>
+        </MAppText>
       </Box>
-      <AppText size="2xl" fontWeight="700">
+      <MAppText size="2xl" fontWeight="700">
         {text}
-      </AppText>
-      <AppText c="gray.8" size="sm">
+      </MAppText>
+      <MAppText c="gray.8" size="sm">
         {subtext}
-      </AppText>
+      </MAppText>
     </Paper>
   )
 }

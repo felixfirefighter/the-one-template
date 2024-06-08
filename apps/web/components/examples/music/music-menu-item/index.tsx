@@ -1,5 +1,5 @@
 import { Menu } from '@mantine/core'
-import { AppText } from '@the-one/ui'
+import { MAppText } from '@the-one/mantine-ui'
 import { HeaderItem } from '../music-header/types'
 
 interface Props {
@@ -10,9 +10,9 @@ export const MusicMenuItem: React.FC<Props> = ({ item }) => {
   const renderSection = (section: string | React.ReactNode) => {
     if (typeof section === 'string') {
       return (
-        <AppText size="sm" c="dimmed">
+        <MAppText size="sm" c="dimmed">
           {section}
-        </AppText>
+        </MAppText>
       )
     }
 
@@ -26,7 +26,7 @@ export const MusicMenuItem: React.FC<Props> = ({ item }) => {
         leftSection={renderSection(item.prefix)}
         rightSection={renderSection(item.subText)}
       >
-        <AppText size="sm">{item.title}</AppText>
+        <MAppText size="sm">{item.title}</MAppText>
       </Menu.Item>
       {item.hasDivider && <Menu.Divider />}
     </div>

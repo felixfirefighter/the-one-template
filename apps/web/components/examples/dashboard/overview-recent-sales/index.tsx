@@ -1,20 +1,20 @@
 import { Avatar, Paper } from '@mantine/core'
-import { AppRichListItem, AppText } from '@the-one/ui'
+import { MAppRichListItem, MAppText } from '@the-one/mantine-ui'
 import { RECENT_SALES } from './data'
 
 export const OverviewRecentSales = () => {
   return (
     <Paper radius={'lg'} shadow="sm" p={24} withBorder>
-      <AppText fontWeight="500" size='lg' mb={'sm'}>Recent Sales</AppText>
+      <MAppText fontWeight="500" size='lg' mb={'sm'}>Recent Sales</MAppText>
       {RECENT_SALES.map((sale) => {
         return (
-          <AppRichListItem
+          <MAppRichListItem
             prefix={<Avatar src={sale.img} mr='sm'></Avatar>}
             key={sale.username}
             title={sale.username}
             subtitle={sale.email}
             suffix={
-              <AppText size='sm'>{sale.amount}</AppText>
+              <MAppText size='sm'>{sale.amount}</MAppText>
             }
           />
         )
