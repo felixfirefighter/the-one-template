@@ -3,7 +3,7 @@ import { TestimonialCard } from '@/components/testimonial-card'
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="w-80">
+      <div className="w-96">
         <TestimonialCard
           avatar="https://i.pravatar.cc/48"
           name="Sarah Dole"
