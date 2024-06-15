@@ -28,7 +28,9 @@ export const TestimonialCard: React.FC<Props> = ({
           <div className="text-neutral-600 text-sm truncate">{handle}</div>
         </div>
       </div>
-      <div className={clsx('text-neutral-600', `line-clamp-${maxMessageRow}`)}>
+      <div className={'text-neutral-600'} style={{
+        lineClamp: maxMessageRow
+      }}>
         {message}
       </div>
     </div>
