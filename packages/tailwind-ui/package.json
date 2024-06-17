@@ -6,6 +6,7 @@
   "types": "src/index.ts",
   "exports": {
     "./components/blog-card": "./src/components/blog-card/index.tsx",
+    "./components/profile-card": "./src/components/profile-card/index.tsx",
     "./components/tag": "./src/components/tag/index.tsx",
     "./components/testimonial-card": "./src/components/testimonial-card/index.tsx"
   },
