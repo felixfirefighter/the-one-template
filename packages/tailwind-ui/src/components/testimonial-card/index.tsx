@@ -14,13 +14,10 @@ export const TestimonialCard: React.FC<Props> = ({
   handle,
   message,
   avatar,
-  width = 340,
   maxMessageRow = 6,
 }) => {
   return (
-    <div className="p-6 rounded-lg shadow bg-white" style={{
-      width
-    }}>
+    <div className="p-6 rounded-lg shadow bg-white w-85">
       <div className="flex mb-4">
         <img className="rounded-full mr-4" src={avatar} alt={name} />
         <div className="overflow-hidden">

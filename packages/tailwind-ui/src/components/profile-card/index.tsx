@@ -24,12 +24,7 @@ export const ProfileCard: React.FC<Props> = ({
   socials,
 }) => {
   return (
-    <div
-      className="py-6 px-4 rounded-lg shadow bg-white text-center"
-      style={{
-        width: 340,
-      }}
-    >
+    <div className="py-6 px-4 rounded-lg shadow bg-white text-center w-96">
       <img className="rounded-full w-16 mx-auto mb-6" src={avatar} alt={name} />
       <div className="font-medium text-xl">{name}</div>
       <div className="text-neutral-600 text-sm mb-6">
@@ -37,7 +32,7 @@ export const ProfileCard: React.FC<Props> = ({
       </div>
       <p className="text-neutral-600 mb-10">{headline}</p>
 
-      <Button block onClick={cta.onClick}>
+      <Button className="py-2.5 px-6 font-medium text-md" block onClick={cta.onClick}>
         {cta.text}
       </Button>
 
