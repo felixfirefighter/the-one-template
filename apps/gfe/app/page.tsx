@@ -1,4 +1,4 @@
-import { BlogCard } from '@/components/blog-card'
+import { BlogCard } from "@the-one/tailwind-ui/components/blog-card";
 
 export default function Home() {
   return (

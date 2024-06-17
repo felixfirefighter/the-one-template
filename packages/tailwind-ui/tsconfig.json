@@ -1,0 +1,14 @@
+{
+  "extends": "@the-one/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      
+    },
+    "outDir": "dist",
+    "declarationMap": true,
+    
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"],
+}

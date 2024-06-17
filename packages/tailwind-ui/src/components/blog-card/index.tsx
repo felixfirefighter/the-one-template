@@ -1,6 +1,6 @@
-import { Link } from '@/types/link'
 import { RiArrowRightLine } from '@remixicon/react'
 import { Tag, TagProps } from '../tag'
+import { Link } from '../../types/link'
 
 interface Props {
   image: string
@@ -19,7 +19,7 @@ export const BlogCard: React.FC<Props> = ({
 }) => {
   return (
     <div
-      className="rounded-md shadow bg-white w-"
+      className="rounded-md shadow bg-white"
       style={{
         width: 340,
       }}

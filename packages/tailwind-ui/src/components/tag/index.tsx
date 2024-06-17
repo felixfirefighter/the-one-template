@@ -1,4 +1,4 @@
-import { COLOR_MAP, Color } from '@/types/color'
+import { COLOR_MAP, Color } from "../../types/color"
 
 export interface TagProps {
   title: string
