@@ -10,7 +10,8 @@ interface Props {
   backIcon: React.ReactNode,
   disabled: boolean,
   error: boolean,
-  type?: 'text' | 'email' | 'password' 
+  type?: 'text' | 'email' | 'password',
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
 export const TextInput: React.FC<Props> = ({
@@ -23,12 +24,14 @@ export const TextInput: React.FC<Props> = ({
   disabled,
   error,
   type = 'text',
+  onChange
 }) => {
   const [value, setValue] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
+    onChange(e)
   };
 
   return (
