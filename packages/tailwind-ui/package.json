@@ -5,9 +5,9 @@
   "main": "src/index.ts",
   "types": "src/index.ts",
   "exports": {
+    "./components/badge": "./src/components/badge/index.tsx",
     "./components/blog-card": "./src/components/blog-card/index.tsx",
     "./components/profile-card": "./src/components/profile-card/index.tsx",
-    "./components/tag": "./src/components/tag/index.tsx",
     "./components/testimonial-card": "./src/components/testimonial-card/index.tsx"
   },
   "typesVersions": {
@@ -40,6 +40,7 @@
     "@types/eslint": "^8.44.7",
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
+    "@types/tinycolor2": "^1.4.6",
     "autoprefixer": "^10.4.19",
     "eslint": "^9.5.0",
     "eslint-plugin-storybook": "^0.8.0",
@@ -49,6 +50,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "react": "^18.3.1"
+    "react": "^18.3.1",
+    "tinycolor2": "^1.6.0"
   }
 }

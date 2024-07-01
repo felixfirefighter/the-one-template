@@ -1,10 +1,10 @@
 import { RiArrowRightLine } from '@remixicon/react'
 import { Link } from '../../types/link'
-import { Tag, TagProps } from '../tag'
+import { Badge, BadgeProps } from '../badge'
 
 interface Props {
   image: string
-  tag: TagProps
+  badge: BadgeProps
   title: string
   description: string
   link: Link
@@ -12,7 +12,7 @@ interface Props {
 
 export const BlogCard: React.FC<Props> = ({
   image,
-  tag,
+  badge,
   title,
   description,
   link,
@@ -22,7 +22,7 @@ export const BlogCard: React.FC<Props> = ({
       <img className="rounded-t-md" src={image} alt={title} />
 
       <div className="px-4 py-6">
-        <Tag {...tag} />
+        <Badge {...badge} />
 
         <div className="font-semibold text-lg truncate pt-2 pb-3">{title}</div>
         <div className={'text-neutral-600 mb-6 line-clamp-2'}>
