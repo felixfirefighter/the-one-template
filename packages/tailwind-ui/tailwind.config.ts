@@ -24,7 +24,7 @@ const config: Config = {
           800: '#3730a3',
           900: '#312e81',
           950: '#1e1b4b',
-        },
+        }
       },
       colors: {
         brand: {
@@ -45,8 +45,8 @@ const config: Config = {
         85: '21.25rem',
       },
       padding: {
-        '4.5': '1.125rem',
-      },
+        '4.5': '1.125rem'
+      }
     },
   },
 }
