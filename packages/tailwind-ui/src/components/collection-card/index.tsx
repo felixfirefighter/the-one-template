@@ -6,6 +6,7 @@ interface CollectionCardProps {
   image: string
   title: string
   description: string
+  className?: string
 }
 
 export const CollectionCard: React.FC<CollectionCardProps> = ({
@@ -13,19 +14,26 @@ export const CollectionCard: React.FC<CollectionCardProps> = ({
   image,
   title,
   description,
+  className,
 }) => {
   return (
     <div
-      className={clsx('relative overflow-hidden rounded-lg focus:ring', {
-        'w-full h-96 md:w-96 md:h-96': variant === 'primary',
-        'w-full h-64 md:w-64 md:h-64': variant === 'secondary',
-      })}
+      className={clsx(
+        'relative overflow-hidden rounded-lg focus:ring cursor-pointer',
+        {
+          'w-full col-span-4 md:col-span-6 lg:col-span-5 h-145 row-span-2':
+            variant === 'primary',
+          'w-full col-span-4 md:col-span-6 lg:col-span-7 h-69 row-span-1':
+            variant === 'secondary',
+        },
+        className,
+      )}
       tabIndex={0} // for focus state
     >
       <div
         className={clsx(
           'w-full h-full absolute top-0 bottom-0 left-0 right-0',
-          'bg-gradient-to-t from-black/25 to-black/15 opacity-50',
+          'bg-gradient-to-t from-black/50 to-black/15 opacity-50',
           'transition-all hover:opacity-100',
         )}
       ></div>

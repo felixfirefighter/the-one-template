@@ -1,28 +1,30 @@
-import React from 'react';
-import { CollectionCard } from '../collection-card';
+import React from 'react'
+import { CollectionCard } from '../collection-card'
 
 interface Collection {
-  name: string;
-  image: string;
-  description: string;
+  title: string
+  description: string
+  image: string
 }
 
 interface CollectionGridProps {
-  collections: Collection[];
+  collections: Collection[]
 }
 
-export const CollectionGrid: React.FC<CollectionGridProps> = ({ collections }) => {
+export const CollectionGrid: React.FC<CollectionGridProps> = ({
+  collections,
+}) => {
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-rows-2 grid-cols-4 gap-7 md:grid-cols-12">
       {collections.map((collection, index) => (
         <CollectionCard
           key={index}
           variant={index === 0 ? 'primary' : 'secondary'}
           image={collection.image}
-          name={collection.name}
+          title={collection.title}
           description={collection.description}
         />
       ))}
     </div>
-  );
-};
+  )
+}
