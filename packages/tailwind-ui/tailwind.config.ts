@@ -44,8 +44,11 @@ const config: Config = {
       width: {
         85: '21.25rem',
       },
-      height: {
+      height: { // /4
         69: '17.25rem',
+        85: '21.25rem',
+        98: '24.5rem',
+        100: '25rem',
         145: '36.25rem',
       },
       padding: {

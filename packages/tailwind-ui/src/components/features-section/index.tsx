@@ -30,13 +30,11 @@ export const FeaturesSection: React.FC<Props> = ({
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-white text-center justify-center"
+            className="text-center"
           >
-            <div>
               <div className="text-4xl text-brand-700 p-3 shadow mb-4 rounded-full inline-block">{feature.icon}</div>
               <h4 className="text-xl font-semibold mb-2">{feature.title}</h4>
               <p className="text-neutral-600">{feature.description}</p>
-            </div>
           </div>
         ))}
       </div>

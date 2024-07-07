@@ -2,7 +2,6 @@ import {
   RiBrushLine,
   RiCopyrightLine,
   RiDownload2Line,
-  RiDownloadLine,
   RiLoopRightFill,
   RiRefund2Line,
   RiTeamLine,
@@ -32,7 +31,7 @@ export const Default: Story = {
       'In a world where storytelling constantly evolves, we lead with groundbreaking images designed for your presentation excellence.',
     features: [
       {
-        icon: <RiDownload2Line/>,
+        icon: <RiDownload2Line />,
         title: 'Infinite Download',
         description:
           'Once you subscribe to our plans, they’re all yours. Download as many as you want and use them for work presentations, wallpapers, and much more.',
