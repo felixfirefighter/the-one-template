@@ -57,7 +57,7 @@ export const HeroFeatureSection: React.FC<Props> = ({
       <div className="xl:w-3/5">
         <img
           src={imageUrl}
-          alt="Premium abstract images"
+          alt={title}
           className="rounded-xl"
         />
       </div>
