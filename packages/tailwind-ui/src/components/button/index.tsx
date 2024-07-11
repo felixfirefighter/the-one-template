@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 
-export interface Props {
+export interface ButtonProps {
   variant?:
     | 'primary'
     | 'secondary'
@@ -56,7 +56,7 @@ const PADDING_FOR_ICON_MAP = {
   xxl: 'p-4.5',
 }
 
-export const Button: React.FC<Props> = ({
+export const Button: React.FC<ButtonProps> = ({
   variant = 'primary',
   children,
   size = 'md',
