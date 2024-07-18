@@ -4,11 +4,11 @@ import { COLOR_MAP, Color } from "../../types/color"
 
 export interface BadgeProps {
   title: string
-  color: Color | string
+  color?: Color | string
   size?: 'sm' | 'md' | 'lg'
 }
 
-export const Badge: React.FC<BadgeProps> = ({ title, color, size = 'md' }) => {
+export const Badge: React.FC<BadgeProps> = ({ title, color = 'indigo', size = 'md' }) => {
   const SIZE_MAP = {
     sm: 'text-xs px-1.5 py-0.5',
     md: 'text-sm px-2 py-0.5',
