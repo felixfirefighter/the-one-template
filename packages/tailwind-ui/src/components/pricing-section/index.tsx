@@ -34,14 +34,14 @@ export const PricingSection: React.FC<Props> = ({
     <div>
       <div className="text-center mb-16">
         <h3 className="text-brand-700 font-semibold mb-3">{title}</h3>
-        <h1 className="text-3xl lg:text-5xl font-semibold text-neutral-900 mb-5">
+        <h1 className="text-3xl md:text-5xl font-semibold text-neutral-900 mb-5">
           {headline}
         </h1>
-        <p className="text-neutral-600 text-lg lg:text-xl">{description}</p>
+        <p className="text-neutral-600 text-lg md:text-xl">{description}</p>
       </div>
       <div className="lg:flex lg:justify-between lg:items-center">
         <div className="w-full lg:w-7/12">
-          <h2 className="text-2xl lg:text-4xl font-semibold mb-8">
+          <h2 className="text-2xl md:text-4xl font-semibold mb-8 md:mb-16">
             {feature.title}
           </h2>
           <ul className="mb-8">
@@ -57,22 +57,20 @@ export const PricingSection: React.FC<Props> = ({
             })}
           </ul>
         </div>
-        <div className="">
-          <div className="bg-white rounded-lg shadow-lg text-center">
-            {card.title && (
-              <div className="mb-2">
-                <Badge title={card.title} color="green"></Badge>
-              </div>
-            )}
-            <div className="text-6xl font-bold mb-2">{card.headline}</div>
-            <div className="text-neutral-600 text-sm mb-4">
-              {card.description}
+        <div className="bg-white rounded-lg shadow-lg text-center p-8">
+          {card.title && (
+            <div className="mb-2">
+              <Badge title={card.title} color="green"></Badge>
             </div>
-            <p className="text-neutral-900 text-xl mb-4">{card.body}</p>
-            <Button block onClick={card.button?.onClick}>
-              {card.button?.text}
-            </Button>
+          )}
+          <div className="text-5xl lg:text-6xl font-semibold mb-2">{card.headline}</div>
+          <div className="text-neutral-600 text-sm mb-8">
+            {card.description}
           </div>
+          <p className="text-neutral-900 text-xl mb-8 mx-2">{card.body}</p>
+          <Button block onClick={card.button?.onClick}>
+            {card.button?.text}
+          </Button>
         </div>
       </div>
     </div>
