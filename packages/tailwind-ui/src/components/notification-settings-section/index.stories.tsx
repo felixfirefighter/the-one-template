@@ -36,6 +36,34 @@ export const Default: Story = {
         email: true,
         sms: false,
       },
+      {
+        id: 'feature-updates',
+        title: 'Feature updates',
+        push: false,
+        email: true,
+        sms: false,
+      },
+      {
+        id: 'comments',
+        title: 'Comments',
+        push: false,
+        email: true,
+        sms: false,
+      },
+      {
+        id: 'friend-updates',
+        title: 'Updates from friends',
+        push: false,
+        email: true,
+        sms: false,
+      },
+      {
+        id: 'friend-requests',
+        title: 'Friends requests',
+        push: false,
+        email: true,
+        sms: false,
+      },
     ])
 
     const onSettingToggled = (id: string, type: NotificationSettingType) => {
@@ -52,6 +80,7 @@ export const Default: Story = {
     return (
       <NotificationSettingsSection
         {...args}
+        settings={settings}
         onSettingToggled={onSettingToggled}
         onSaved={() => {}}
       />

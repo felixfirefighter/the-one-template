@@ -109,7 +109,7 @@ export const Button: React.FC<ButtonProps> = ({
         className,
       )}
     >
-      {leftIcon} <span className="px-1">{children}</span>
+      {leftIcon} <span className="px-1 font-medium">{children}</span>
       {rightIcon}
     </button>
   )
