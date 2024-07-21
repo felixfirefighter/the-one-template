@@ -1,0 +1,102 @@
+import clsx from 'clsx'
+import React from 'react'
+
+export interface ProductSpecsSectionFeatureProps {
+  title: string
+  icon: React.ReactNode
+}
+
+interface ProductSpecsSectionImageProps {
+  src: string
+  width: string
+}
+
+interface ProductSpecsSectionTabProps {
+  title: string
+  headline: string
+  description: string
+  features: ProductSpecsSectionFeatureProps[]
+  image: {
+    sm?: ProductSpecsSectionImageProps
+    md?: ProductSpecsSectionImageProps
+    lg?: ProductSpecsSectionImageProps
+  }
+}
+
+interface Props {
+  title: string
+  description: string
+  tabs: ProductSpecsSectionTabProps[]
+  activeTabIndex: number
+  onTabChange: (index: number) => void
+}
+
+export const ProductSpecsSection: React.FC<Props> = ({
+  title,
+  description,
+  tabs,
+  activeTabIndex,
+  onTabChange,
+}) => {
+  return (
+    <div>
+      <div className="w-full mb-16">
+        <h2 className="text-3xl font-semibold mb-6">{title}</h2>
+        <p className="text-neutral-600 text-lg">{description}</p>
+      </div>
+      <div className="border-b mb-4 relative">
+        <nav className="flex overflow-x-auto">
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              className={clsx('py-2 px-4 border-b-2', {
+                'border-brand-600 text-brand-600': activeTabIndex === index,
+                'border-transparent text-neutral-600': activeTabIndex !== index,
+              })}
+              onClick={() => onTabChange(index)}
+            >
+              {tab.title}
+            </button>
+          ))}
+        </nav>
+      </div>
+      <div className="flex flex-col md:flex-row md:items-center">
+        <div className="w-full md:w-1/3">
+          <img
+            src={tabs[activeTabIndex]?.image.lg?.src}
+            srcSet={`
+                ${tabs[activeTabIndex]?.image.sm?.src} ${tabs[activeTabIndex]?.image.sm?.width},
+                ${tabs[activeTabIndex]?.image.md?.src} ${tabs[activeTabIndex]?.image.md?.width},
+                ${tabs[activeTabIndex]?.image.lg?.src} ${tabs[activeTabIndex]?.image.lg?.width},
+            `}
+            sizes={`
+              ${tabs[activeTabIndex]?.image.sm?.width}
+              (min-width: 768px) ${tabs[activeTabIndex]?.image.md?.width}
+              (min-width: 1024px) ${tabs[activeTabIndex]?.image.lg?.width}
+            `}
+            alt={tabs[activeTabIndex]?.title}
+            className="rounded-lg w-full"
+          />
+        </div>
+        <div className="w-2/3">
+          <h3 className="text-2xl font-semibold mb-4">
+            {tabs[activeTabIndex]?.headline}
+          </h3>
+          <p className="text-gray-600 mb-4">
+            {tabs[activeTabIndex]?.description}
+          </p>
+          <div className="grid gap-4">
+            {tabs[activeTabIndex]?.features.map((feature) => (
+              <div className="flex items-center gap-2">
+                <div className="rounded-full shadow p-3 text-brand-700">
+                  {feature.icon}
+                </div>
+                <span className="text-gray-600">{feature.title}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
