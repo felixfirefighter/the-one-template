@@ -43,6 +43,8 @@ const config: Config = {
       },
       width: {
         85: '21.25rem',
+        90: '22.5rem',
+        98: '24.5rem',
       },
       height: { // /4
         69: '17.25rem',

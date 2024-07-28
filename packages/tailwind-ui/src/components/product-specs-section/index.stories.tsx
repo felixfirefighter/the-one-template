@@ -48,8 +48,16 @@ export const Default: Story = {
         image: {
           sm: {
             src: 'https://res.cloudinary.com/ytlee/image/upload/v1721572521/tailwind-ui/mobile/yspj9aq4s1gz6ugg38ul.jpg',
-            width: '467w'
+            width: '467'
           },
+          md: {
+            src: 'https://res.cloudinary.com/ytlee/image/upload/v1721575042/tailwind-ui/tablet/mzwvnbsjvjfpx3gdq42p.jpg',
+            width: '1056'
+          },
+          lg: {
+            src: 'https://res.cloudinary.com/ytlee/image/upload/v1721575069/tailwind-ui/desktop/d1zlfxtxv9kne5ci4rvx.jpg',
+            width: '551'
+          }
         },
         features: [
           {
@@ -78,7 +86,15 @@ export const Default: Story = {
         image: {
           sm: {
             src: 'https://res.cloudinary.com/ytlee/image/upload/v1721572520/tailwind-ui/mobile/buwpgprmcc82nnopznnl.jpg',
-            width: '467w'
+            width: '467'
+          },
+          md: {
+            src: 'https://res.cloudinary.com/ytlee/image/upload/v1721575041/tailwind-ui/tablet/h4uehs8qmusfhqhbf0lv.jpg',
+            width: '1056'
+          },
+          lg: {
+            src: 'https://res.cloudinary.com/ytlee/image/upload/v1721575064/tailwind-ui/desktop/fjafjxxcc7riwk71rmsn.jpg',
+            width: '551'
           }
         },
         features: [
@@ -108,7 +124,15 @@ export const Default: Story = {
         image: {
           sm: {
             src: 'https://res.cloudinary.com/ytlee/image/upload/v1721572520/tailwind-ui/mobile/xx7d8sjkac12zhxsd1sz.jpg',
-            width: '467w'
+            width: '467'
+          },
+          md: {
+            src: 'https://res.cloudinary.com/ytlee/image/upload/v1721575041/tailwind-ui/tablet/xfkwja7alefnq4w7izyz.jpg',
+            width: '1056'
+          },
+          lg: {
+            src: 'https://res.cloudinary.com/ytlee/image/upload/v1721575067/tailwind-ui/desktop/zqw982a0dwztgzn3gcsi.jpg',
+            width: '551'
           }
         },
         features: [
@@ -138,8 +162,16 @@ export const Default: Story = {
         image: {
           sm: {
             src: 'https://res.cloudinary.com/ytlee/image/upload/v1721572520/tailwind-ui/mobile/gb67bsod3urzpucaozzq.jpg',
-            width: '467w'
+            width: '467'
           },
+          md: {
+            src: 'https://res.cloudinary.com/ytlee/image/upload/v1721575042/tailwind-ui/tablet/goffxp3h5wihrsjjlxqr.jpg',
+            width: '1056'
+          },
+          lg: {
+            src: 'https://res.cloudinary.com/ytlee/image/upload/v1721575068/tailwind-ui/desktop/thsbucw6lyemcgbwwhfg.jpg',
+            width: '551'
+          }
         },
         features: [
           {
