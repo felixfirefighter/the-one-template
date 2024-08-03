@@ -36,11 +36,11 @@ export const StatisticsSection: React.FC<Props> = ({
         <p className="text-neutral-600 text-xl">{description}</p>
       </div>
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-8">
-        <div className="w-full mb-12">
-          <img src={image} alt={title} className="w-full" />
+        <div className="w-full lg:w-1/2 h-full mb-12 lg:mb-0">
+          <img src={image} alt={title} className="w-full h-full" />
         </div>
-        <div className="w-full lg:w-1/2 flex flex-col gap-6">
-          <p className='text-lg text-neutral-600 mb-6'>{statistics.title}</p>
+        <div className="w-full lg:w-1/2 flex flex-col gap-8">
+          <p className='text-lg text-neutral-600'>{statistics.title}</p>
           {statistics.items.map((item) => {
             return (
               <div key={item.title} className="bg-white border border-gray-200 p-4 rounded-lg shadow text-center">
