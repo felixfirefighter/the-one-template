@@ -4,6 +4,8 @@
 
 Check out the demo [here](https://the-one-template-web.vercel.app)
 
+Also check out the components demo [here](https://the-one-template-tailwind-ui.vercel.app/)
+
 ## Development
 
 ### Prerequisite
