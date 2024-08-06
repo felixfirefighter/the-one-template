@@ -1,20 +1,23 @@
 import clsx from 'clsx';
 import React, { useState } from 'react';
 
-interface Props {
+export interface TextInputProps {
+  className?: string
   label?: string,
   placeholder?: string,
   hint?: string,
-  errorMessage: string,
-  frontIcon: React.ReactNode,
-  backIcon: React.ReactNode,
-  disabled: boolean,
-  error: boolean,
+  errorMessage?: string,
+  frontIcon?: React.ReactNode,
+  backIcon?: React.ReactNode,
+  disabled?: boolean,
+  error?: boolean,
   type?: 'text' | 'email' | 'password',
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
+  value?: string,
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void,
 }
 
-export const TextInput: React.FC<Props> = ({
+export const TextInput: React.FC<TextInputProps> = ({
+  className,
   label,
   placeholder,
   hint,
@@ -24,18 +27,17 @@ export const TextInput: React.FC<Props> = ({
   disabled,
   error,
   type = 'text',
+  value,
   onChange
 }) => {
-  const [value, setValue] = useState('');
   const [isFocused, setIsFocused] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-    onChange(e)
+    onChange?.(e)
   };
 
   return (
-    <div className="mb-4">
+    <div className={className}>
       {label && <label className="block text-neutral-700 text-sm mb-1.5">{label}</label>}
       <div
         className={clsx('flex items-center border rounded py-2.5 px-3.5 text-gray-700 focus:outline-none', {
