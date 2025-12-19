@@ -1,3 +1,5 @@
+'use client'
+
 import { Flex } from '@mantine/core'
 import { IconArrowDown, IconArrowRight, IconArrowUp, IconCircle, IconCircleCheck, IconProgress } from '@tabler/icons-react'
 import { MAppIconSize, MAppIconStroke, MAppText } from '@the-one/mantine-ui'

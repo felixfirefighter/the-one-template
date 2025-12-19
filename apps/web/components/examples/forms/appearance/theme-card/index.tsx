@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Paper } from '@mantine/core'
 import { MAppSize } from '@the-one/mantine-ui'
 

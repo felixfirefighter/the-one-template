@@ -1,3 +1,5 @@
+'use client'
+
 import { Paper } from '@mantine/core'
 import { MAppSelectItem, MAppText } from '@the-one/mantine-ui'
 import { useState } from 'react'

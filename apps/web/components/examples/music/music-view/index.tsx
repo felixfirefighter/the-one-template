@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Image, Paper, Space } from '@mantine/core'
 import { MAppText } from '@the-one/mantine-ui'
 import { MADE_FOR_YOU_MUSICS, MAIN_MUSICS } from './data'

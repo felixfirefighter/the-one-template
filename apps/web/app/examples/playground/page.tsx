@@ -1,3 +1,5 @@
+'use client'
+
 import { Container } from "@mantine/core";
 import { PlaygroundHeader } from "../../../components/examples/playground/playground-header";
 import { PlaygroundMain } from "../../../components/examples/playground/playground-main";

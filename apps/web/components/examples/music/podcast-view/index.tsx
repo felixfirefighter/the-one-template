@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Button, Paper, Space } from '@mantine/core'
 import { IconBuildingBroadcastTower } from '@tabler/icons-react'
 import { MAppIconStroke, MAppSize, MAppText } from '@the-one/mantine-ui'

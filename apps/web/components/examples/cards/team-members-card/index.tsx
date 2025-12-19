@@ -1,3 +1,5 @@
+'use client'
+
 import { Avatar, Paper, Select } from '@mantine/core'
 import { MAppRichListItem, MAppText } from '@the-one/mantine-ui'
 import { DATA, ROLES } from './data'

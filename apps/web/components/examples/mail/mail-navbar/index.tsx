@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Divider, NavLink, Select } from '@mantine/core'
 import { MAppText, MAppWidth } from '@the-one/mantine-ui'
 import { useState } from 'react'

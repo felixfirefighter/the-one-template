@@ -1,3 +1,5 @@
+'use client'
+
 import { Button, Flex, Modal, TextInput } from '@mantine/core'
 import { MAppText } from '@the-one/mantine-ui'
 

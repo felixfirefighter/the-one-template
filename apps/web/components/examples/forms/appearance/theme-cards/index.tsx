@@ -1,3 +1,5 @@
+'use client'
+
 import { Grid, useMantineColorScheme } from '@mantine/core'
 import { MAppText } from '@the-one/mantine-ui'
 import { ThemeCard } from '../theme-card'

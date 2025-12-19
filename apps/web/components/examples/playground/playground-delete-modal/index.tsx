@@ -1,3 +1,5 @@
+'use client'
+
 import { Button, Flex, Modal } from '@mantine/core'
 import { notifications } from '@mantine/notifications';
 import { MAppText } from '@the-one/mantine-ui'

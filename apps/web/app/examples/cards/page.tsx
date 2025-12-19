@@ -1,3 +1,5 @@
+'use client'
+
 import { Container } from '@mantine/core'
 import { CardGrid } from '../../../components/examples/cards/card-grid'
 

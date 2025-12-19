@@ -1,3 +1,5 @@
+'use client'
+
 import { Container, Flex } from '@mantine/core'
 import { MusicNavbar } from '../../../components/examples/music/music-navbar'
 import { MusicMain } from '../../../components/examples/music/music-main'

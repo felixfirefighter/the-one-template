@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Button, Container, Divider, Flex, TextInput } from '@mantine/core'
 import { IconBrandGoogleFilled, IconTriangle } from '@tabler/icons-react'
 import { MAppSize, MAppText } from '@the-one/mantine-ui'

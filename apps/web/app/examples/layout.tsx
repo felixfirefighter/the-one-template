@@ -1,3 +1,5 @@
+'use client'
+
 import { Container, Paper } from '@mantine/core'
 import { MAppText } from '@the-one/mantine-ui'
 import { ExampleNavigations } from '../../components/examples/example-navigations'

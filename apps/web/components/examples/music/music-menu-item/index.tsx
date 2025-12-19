@@ -1,3 +1,5 @@
+'use client'
+
 import { Menu } from '@mantine/core'
 import { MAppText } from '@the-one/mantine-ui'
 import { HeaderItem } from '../music-header/types'

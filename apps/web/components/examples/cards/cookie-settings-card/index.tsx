@@ -1,3 +1,5 @@
+'use client'
+
 import { Paper, Switch } from '@mantine/core'
 import { MAppRichListItem, MAppText } from '@the-one/mantine-ui'
 import { DATA } from './data'

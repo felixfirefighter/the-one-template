@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Flex, Textarea } from '@mantine/core'
 
 interface Props {

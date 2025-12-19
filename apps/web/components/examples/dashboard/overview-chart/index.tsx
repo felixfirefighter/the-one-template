@@ -1,3 +1,5 @@
+'use client'
+
 import { BarChart } from '@mantine/charts'
 import { Paper, useMantineTheme } from '@mantine/core'
 import { MAppSize, MAppText } from '@the-one/mantine-ui'

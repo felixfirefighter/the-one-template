@@ -1,3 +1,5 @@
+'use client'
+
 import { Container, Flex, SegmentedControl } from '@mantine/core'
 import { MAppText } from '@the-one/mantine-ui'
 import { OverviewCards } from '../../../components/examples/dashboard/overview-cards'

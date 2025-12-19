@@ -1,3 +1,5 @@
+'use client'
+
 import { Avatar, Paper } from '@mantine/core'
 import { MAppRichListItem, MAppText } from '@the-one/mantine-ui'
 import { RECENT_SALES } from './data'

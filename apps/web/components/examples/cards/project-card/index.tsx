@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Button, Flex, Paper, Pill } from '@mantine/core'
 import { IconCircle, IconSquare, IconStar } from '@tabler/icons-react'
 import { MAppSize, MAppText } from '@the-one/mantine-ui'

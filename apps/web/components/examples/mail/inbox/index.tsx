@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, Divider, Pill, TextInput } from '@mantine/core'
 import { IconSearch } from '@tabler/icons-react'
 import { MAppInboxCard, MAppSize, MAppText } from '@the-one/mantine-ui'

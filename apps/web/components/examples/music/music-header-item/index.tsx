@@ -1,3 +1,5 @@
+'use client'
+
 import { Menu } from '@mantine/core'
 import { IconChevronRight } from '@tabler/icons-react'
 import { MAppSize, MAppText } from '@the-one/mantine-ui'

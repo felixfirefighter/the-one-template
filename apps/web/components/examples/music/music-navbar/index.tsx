@@ -1,3 +1,5 @@
+'use client'
+
 import { Box, NavLink } from '@mantine/core'
 import { MAppText, MAppWidth } from '@the-one/mantine-ui'
 import { NAV_LINKS } from './data'
